@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "platinum_ingot",
+  "ingredients": [
+    {
+      "item": "enhancedcraft:platinum_block"
+    }
+  ],
+  "result": {
+    "item": "enhancedcraft:platinum_ingot",
+    "count": 9
+  }
+}

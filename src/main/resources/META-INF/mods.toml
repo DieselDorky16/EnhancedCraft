@@ -1,0 +1,46 @@
+modLoader="javafml" #mandatory
+
+loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+
+issueTrackerURL="http://my.issue.tracker/" #optional
+
+[[mods]] #mandatory
+
+modId="enhancedcraft" #mandatory
+
+version="1.15.2-1.0.1" #mandatory
+
+displayName="EnhancedCraft: Java Edition" #mandatory
+
+updateJSONURL="http://myurl.me/" #optional
+
+displayURL="http://dieseldorky16.fandom.com/" #optional
+
+logoFile="enhancedcraft.png" #optional
+
+credits="Thanks to self." #optional
+
+authors="Christopher Lewis" #optional
+
+description='''
+Enhancing Minecraft Gameplay with new features, blocks, items and a new material set.
+'''
+
+[[dependencies.memecraft]] #optional
+
+    modId="forge" #mandatory
+
+    mandatory=true #mandatory
+
+    versionRange="[31,)" #mandatory
+
+    ordering="NONE"
+
+    side="BOTH"
+
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

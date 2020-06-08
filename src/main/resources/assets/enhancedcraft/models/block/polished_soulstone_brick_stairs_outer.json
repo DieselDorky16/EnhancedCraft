@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "enhancedcraft:blocks/polished_soulstone_bricks",
+    "top": "enhancedcraft:blocks/polished_soulstone_bricks",
+    "side": "enhancedcraft:blocks/polished_soulstone_bricks"
+  }
+}

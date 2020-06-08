@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enhancedcraft:block/polished_soulstone_slab"
+    },
+    "type=double": {
+      "model": "enhancedcraft:block/polished_soulstone"
+    },
+    "type=top": {
+      "model": "enhancedcraft:block/polished_soulstone_slab_top"
+    }
+  }
+}

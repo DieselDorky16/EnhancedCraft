@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "enhancedcraft:polished_soulstone"
+    }
+  ],
+  "result": {
+    "item": "enhancedcraft:polished_soulstone_button"
+  }
+}

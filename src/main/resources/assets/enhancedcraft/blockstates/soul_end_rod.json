@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "enhancedcraft:block/soul_end_rod",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "enhancedcraft:block/soul_end_rod",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enhancedcraft:block/soul_end_rod",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "enhancedcraft:block/soul_end_rod",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "enhancedcraft:block/soul_end_rod"
+    },
+    "facing=west": {
+      "model": "enhancedcraft:block/soul_end_rod",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

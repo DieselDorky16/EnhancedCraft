@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "enhancedcraft:soulstone"
+  },
+  "result": "enhancedcraft:soulstone_wall",
+  "count": 1
+}

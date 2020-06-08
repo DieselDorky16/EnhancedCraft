@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "s  ",
+    "ss ",
+    "sss"
+  ],
+  "key": {
+    "s": {
+      "item": "enhancedcraft:soulstone"
+    }
+  },
+  "result": {
+    "item": "enhancedcraft:soulstone_stairs",
+    "count": 4
+  }
+}

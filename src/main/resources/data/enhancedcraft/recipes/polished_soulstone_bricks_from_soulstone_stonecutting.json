@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "enhancedcraft:soulstone"
+  },
+  "result": "enhancedcraft:polished_soulstone_bricks",
+  "count": 1
+}

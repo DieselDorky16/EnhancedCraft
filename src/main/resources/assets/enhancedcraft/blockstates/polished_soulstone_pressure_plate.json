@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "enhancedcraft:block/polished_soulstone_pressure_plate"
+    },
+    "powered=true": {
+      "model": "enhancedcraft:block/polished_soulstone_pressure_plate_down"
+    }
+  }
+}

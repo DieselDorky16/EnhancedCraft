@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "enhancedcraft:blocks/soulstone_top",
+    "top": "enhancedcraft:blocks/soulstone_top",
+    "side": "enhancedcraft:blocks/soulstone"
+  }
+}

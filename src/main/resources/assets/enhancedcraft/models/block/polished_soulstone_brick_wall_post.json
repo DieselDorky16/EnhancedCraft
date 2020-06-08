@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "enhancedcraft:blocks/polished_soulstone_bricks"
+  }
+}

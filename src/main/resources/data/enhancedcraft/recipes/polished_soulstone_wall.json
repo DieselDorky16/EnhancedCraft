@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sss",
+    "sss"
+  ],
+  "key": {
+    "s": {
+      "item": "enhancedcraft:polished_soulstone"
+    }
+  },
+  "result": {
+    "item": "enhancedcraft:polished_soulstone_wall",
+    "count": 6
+  }
+}

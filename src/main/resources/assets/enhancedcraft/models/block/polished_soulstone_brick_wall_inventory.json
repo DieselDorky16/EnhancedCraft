@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "enhancedcraft:blocks/polished_soulstone_bricks"
+  }
+}

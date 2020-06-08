@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "platinum_ingot",
+  "ingredients": [
+    {
+      "item": "enhancedcraft:platinum_scrap"
+    },
+    {
+      "item": "enhancedcraft:platinum_scrap"
+    },
+    {
+      "item": "enhancedcraft:platinum_scrap"
+    },
+    {
+      "item": "enhancedcraft:platinum_scrap"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "item": "enhancedcraft:platinum_ingot"
+  }
+}
