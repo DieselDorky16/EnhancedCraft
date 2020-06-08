@@ -1,4 +1,5 @@
 This mod requires Forge 1.15.2-31.2.0 or later.
+Please note this is the experimental version of the mod. You can find the stable version of the mod on PlanetMinecraft under the same name.
 
 How to install:
 
