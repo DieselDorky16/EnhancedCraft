@@ -20,7 +20,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 public class PlatinumSteel extends FlintAndSteelItem {
     public PlatinumSteel() {
-        super(new Item.Properties().maxDamage(2031).group(ItemGroup.TOOLS));
+        super(new Item.Properties().maxDamage(1024).group(ItemGroup.TOOLS));
     }
     public ActionResultType onItemUse(ItemUseContext context) {
         PlayerEntity playerentity = context.getPlayer();
