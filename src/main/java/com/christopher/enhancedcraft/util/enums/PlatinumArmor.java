@@ -14,7 +14,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.function.Supplier;
 
 public enum PlatinumArmor implements IArmorMaterial {
-    PLATINUM(EnhancedcraftMod.MOD_ID + ":platinum", 50, new int[]{3, 8, 6, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 10.0F, () -> {return Ingredient.fromItems(ItemInit.PLATINUM_INGOT.get());
+    PLATINUM(EnhancedcraftMod.MOD_ID + ":platinum", 50, new int[]{3, 8, 6, 3}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 10.0F, () -> {return Ingredient.fromItems(ItemInit.PLATINUM_INGOT.get());
     });
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] { 11, 16, 15, 13 };
