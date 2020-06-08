@@ -91,6 +91,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> SOUL_FURNACE_BLOCK_ITEM = ITEMS.register("soul_furnace", () -> new DecorativeBlocks(SOUL_FURNACE.get()));
     public static final RegistryObject<Item> SOUL_END_ROD_ITEM = ITEMS.register("soul_end_rod", () -> new DecorativeBlocks(SOUL_END_ROD.get()));
     public static final RegistryObject<Item> SOUL_REDSTONE_LAMP_ITEM = ITEMS.register("soul_redstone_lamp", () -> new RedstoneBlockItemBase(SOUL_REDSTONE_LAMP.get()));
+    public static final RegistryObject<Item> SOUL_GLOWSTONE_ITEM = ITEMS.register("soul_glowstone", () -> new BuildBlockItemBase(BlockInit.SOUL_GLOWSTONE.get()));
 
     //Soulstone BlockItem
     public static final RegistryObject<Item> SOULSTONE_ITEM = ITEMS.register("soulstone", () -> new BuildBlockItemBase(SOULSTONE.get()));
@@ -98,7 +99,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> POLISHED_SOULSTONE_ITEM = ITEMS.register("polished_soulstone", () -> new BuildBlockItemBase(POLISHED_SOULSTONE.get()));
     public static final RegistryObject<Item> POLISHED_SOULSTONE_BRICK_ITEM = ITEMS.register("polished_soulstone_bricks", () -> new BuildBlockItemBase(POLISHED_SOULSTONE_BRICKS.get()));
     public static final RegistryObject<Item> CRACKED_POLISHED_SOULSTONE_BRICK_ITEM = ITEMS.register("cracked_polished_soulstone_bricks", () -> new BuildBlockItemBase(CRACKED_POLISHED_SOULSTONE_BRICKS.get()));
-    public static final RegistryObject<Item> GILDED_SOULSTONE_ITEM = ITEMS.register("golded_soulstone", () -> new BuildBlockItemBase(GILDED_SOULSTONE.get()));
+    public static final RegistryObject<Item> GILDED_SOULSTONE_ITEM = ITEMS.register("gilded_soulstone", () -> new BuildBlockItemBase(GILDED_SOULSTONE.get()));
 
 
     //Soulstone Stairs BlockItem
