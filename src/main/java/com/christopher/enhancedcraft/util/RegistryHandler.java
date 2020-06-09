@@ -156,4 +156,16 @@ public class RegistryHandler {
     );
     public static final RegistryObject<Item> ANGEL_HYPHAE_ITEM = ITEMS.register("angel_hyphae", () -> new BuildBlockItemBase(BlockInit.ANGEL_HYPHAE.get())
     );
+    public static final RegistryObject<Item> ANGEL_SLAB_ITEM = ITEMS.register("angel_slab", () -> new BuildBlockItemBase(BlockInit.ANGEL_SLAB.get())
+    );
+    public static final RegistryObject<Item> ANGEL_STAIRS_ITEM= ITEMS.register("angel_stairs", () -> new BuildBlockItemBase(BlockInit.ANGEL_STAIRS.get())
+    );
+    public static final RegistryObject<Item> ANGEL_BUTTON_ITEM = ITEMS.register("angel_button", () -> new RedstoneBlockItemBase(BlockInit.ANGEL_BUTTON.get())
+    );
+    public static final RegistryObject<Item> ANGEL_PRESSURE_PLATE_ITEM = ITEMS.register("angel_pressure_plate", () -> new RedstoneBlockItemBase(BlockInit.ANGEL_PRESSURE_PLATE.get())
+    );
+    public static final RegistryObject<Item> ANGEL_FENCE_ITEM = ITEMS.register("angel_fence", () -> new DecorativeBlocks(BlockInit.ANGEL_FENCE.get())
+    );
+    public static final RegistryObject<Item> ANGEL_FENCE_GATE_ITEM = ITEMS.register("angel_fence_gate", () -> new DecorativeBlocks(BlockInit.ANGEL_FENCE_GATE.get())
+    );
 }

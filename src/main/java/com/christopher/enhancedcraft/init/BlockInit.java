@@ -48,6 +48,8 @@ public class BlockInit {
             () -> new StairsBlock(() -> BlockInit.ANGEL_PLANKS.get().getDefaultState(),Block.Properties.create(Material.EARTH, MaterialColor.WHITE_TERRACOTTA)));
     public static final RegistryObject<Block> ANGEL_FENCE = BLOCKS.register("angel_fence",
             () -> new FenceBlock(Block.Properties.create(Material.EARTH, MaterialColor.WHITE_TERRACOTTA)));
+    public static final RegistryObject<Block> ANGEL_FENCE_GATE = BLOCKS.register("angel_fence_gate",
+            () -> new FenceGateBlock(Block.Properties.create(Material.EARTH, MaterialColor.WHITE_TERRACOTTA)));
     public static final RegistryObject<Block> ANGEL_BUTTON = BLOCKS.register("example_button",
             () -> new WoodButtonBlockPublic(Block.Properties.create(Material.SAND, MaterialColor.WHITE_TERRACOTTA)));
     public static final RegistryObject<Block> ANGEL_PRESSURE_PLATE = BLOCKS.register("angel_pressure_plate", StonePressurePlateBlockPublic::new);
