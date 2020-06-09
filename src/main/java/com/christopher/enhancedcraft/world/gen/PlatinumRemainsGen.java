@@ -19,7 +19,7 @@ public class PlatinumRemainsGen {
         for (Biome biome : ForgeRegistries.BIOMES) {
             if (biome == Biomes.ICE_SPIKES) {
                 ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(3, 0, 0, 60));// Count, MinHeight, MaxHeightBase, MaxHeight
+                        .configure(new CountRangeConfig(3, 0, 0, 64));// Count, MinHeight, MaxHeightBase, MaxHeight
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
                         .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.PLATINUM_REMAINS.get().getDefaultState(), 4))
                         .withPlacement(customConfig));
@@ -43,7 +43,7 @@ public class PlatinumRemainsGen {
                         .withPlacement(customConfig));
             } else {
                 ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(2, 0, 0, 30));// Count, MinHeight, MaxHeightBase, MaxHeight
+                        .configure(new CountRangeConfig(2, 0, 0, 32));// Count, MinHeight, MaxHeightBase, MaxHeight
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
                         .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.PLATINUM_REMAINS.get().getDefaultState(), 3))
                         .withPlacement(customConfig));
