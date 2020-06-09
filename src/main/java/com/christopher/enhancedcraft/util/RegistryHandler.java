@@ -1,11 +1,11 @@
 package com.christopher.enhancedcraft.util;
 
 import com.christopher.enhancedcraft.EnhancedcraftMod;
-import com.christopher.enhancedcraft.contents.BlockItem.*;
-import com.christopher.enhancedcraft.contents.ToolsRegistry.platinum.*;
-import com.christopher.enhancedcraft.contents.blocks.*;
-import com.christopher.enhancedcraft.contents.items.OtherGroup;
-import com.christopher.enhancedcraft.contents.items.SoulMaterialsItem;
+import com.christopher.enhancedcraft.objects.blocks.BlockItem.*;
+import com.christopher.enhancedcraft.objects.items.ToolsRegistry.platinum.*;
+import com.christopher.enhancedcraft.objects.blocks.BlockStates.*;
+import com.christopher.enhancedcraft.objects.items.OtherGroup;
+import com.christopher.enhancedcraft.objects.items.SoulMaterialsItem;
 import com.christopher.enhancedcraft.init.BlockInit;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -16,8 +16,6 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.logging.Logger;
 
 public class RegistryHandler {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, EnhancedcraftMod.MOD_ID);
@@ -144,5 +142,18 @@ public class RegistryHandler {
     );
     public static final RegistryObject<Item> CHARRED_SOUL_SPONGE_ITEM = ITEMS.register("charred_soul_sponge", () -> new BuildBlockItemBase(BlockInit.CHARRED_SOUL_SPONGE.get()
     ));
-}
 
+    //Wood Blocks
+    public static final RegistryObject<Item> ANGEL_DOOR_ITEM = ITEMS.register("angel_door", () -> new RedstoneBlockItemBase(BlockInit.ANGEL_DOOR.get())
+    );
+    public static final RegistryObject<Item> ANGEL_PLANKS_ITEM = ITEMS.register("angel_planks", () -> new BuildBlockItemBase(BlockInit.ANGEL_PLANKS.get())
+    );
+    public static final RegistryObject<Item> ANGEL_STEM_ITEM = ITEMS.register("angel_stem", () -> new BuildBlockItemBase(BlockInit.ANGEL_STEM.get())
+    );
+    public static final RegistryObject<Item> ANGEL_TRAPDOOR = ITEMS.register("angel_trapdoor", () -> new RedstoneBlockItemBase(BlockInit.ANGEL_TRAPDOOR.get())
+    );
+    public static final RegistryObject<Item> ANGEL_WART = ITEMS.register("angel_wart", () -> new DecorativeBlocks(BlockInit.ANGEL_WART.get())
+    );
+    public static final RegistryObject<Item> ANGEL_HYPHAE_ITEM = ITEMS.register("angel_hyphae", () -> new BuildBlockItemBase(BlockInit.ANGEL_HYPHAE.get())
+    );
+}

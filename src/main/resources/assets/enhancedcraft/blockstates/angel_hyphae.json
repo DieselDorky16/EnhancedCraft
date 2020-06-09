@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "enhancedcraft:block/angel_hyphae",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "enhancedcraft:block/angel_hyphae"
+    },
+    "axis=z": {
+      "model": "enhancedcraft:block/angel_hyphae",
+      "x": 90
+    }
+  }
+}

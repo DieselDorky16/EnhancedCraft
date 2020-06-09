@@ -1,23 +1,20 @@
 package com.christopher.enhancedcraft.init;
 
 import com.christopher.enhancedcraft.EnhancedcraftMod;
-import com.christopher.enhancedcraft.contents.ToolsRegistry.platinum.PlatinumShears;
-import com.christopher.enhancedcraft.contents.ToolsRegistry.platinum.PlatinumSteel;
-import com.christopher.enhancedcraft.contents.foods.PlatinumApple;
-import com.christopher.enhancedcraft.contents.items.OtherGroup;
-import com.christopher.enhancedcraft.contents.items.SoulMaterialsItem;
+import com.christopher.enhancedcraft.objects.items.ToolsRegistry.platinum.PlatinumShears;
+import com.christopher.enhancedcraft.objects.items.ToolsRegistry.platinum.PlatinumSteel;
+import com.christopher.enhancedcraft.objects.items.foods.PlatinumApple;
+import com.christopher.enhancedcraft.objects.items.foods.SoulApple;
+import com.christopher.enhancedcraft.objects.items.OtherGroup;
+import com.christopher.enhancedcraft.objects.items.SoulMaterialsItem;
 import com.christopher.enhancedcraft.util.enums.PlatinumArmor;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import static net.minecraft.item.Items.BUCKET;
 
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS,
@@ -48,4 +45,5 @@ public class ItemInit {
 
     //Foods
     public static final RegistryObject<Item> PLATINUM_APPLE = ITEMS.register("platinum_apple", PlatinumApple::new);
+    public static final RegistryObject<Item> SOUL_APPLE = ITEMS.register("soul_apple", SoulApple::new);
 }

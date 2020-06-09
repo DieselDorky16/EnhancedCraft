@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_rh",
+  "textures": {
+    "top": "enhancedcraft:blocks/angel_door_top",
+    "bottom": "enhancedcraft:blocks/angel_door_bottom"
+  }
+}

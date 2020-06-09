@@ -8,7 +8,7 @@ issueTrackerURL="http://my.issue.tracker/" #optional
 
 modId="enhancedcraft" #mandatory
 
-version="1.15.2-1.0.1" #mandatory
+version="1.15.2-1.0.2" #mandatory
 
 displayName="EnhancedCraft: Java Edition" #mandatory
 
@@ -23,7 +23,7 @@ credits="Thanks to self." #optional
 authors="Christopher Lewis" #optional
 
 description='''
-Enhancing Minecraft Gameplay with new features, blocks, items and a new material set.
+Enhancing Minecraft Gameplay with new features, blocks, items, foods, enchantments and a new material set.
 '''
 
 [[dependencies.memecraft]] #optional

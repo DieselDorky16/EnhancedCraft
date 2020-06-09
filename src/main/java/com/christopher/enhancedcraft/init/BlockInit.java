@@ -1,10 +1,12 @@
 package com.christopher.enhancedcraft.init;
 
 import com.christopher.enhancedcraft.EnhancedcraftMod;
-import com.christopher.enhancedcraft.contents.blocks.CharredSoulSpongeBlock;
-import com.christopher.enhancedcraft.contents.blocks.SoulSpongeBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
+import com.christopher.enhancedcraft.objects.blocks.BlockStates.CharredSoulSpongeBlock;
+import com.christopher.enhancedcraft.objects.blocks.BlockStates.NewWoodType.Angel.*;
+import com.christopher.enhancedcraft.objects.blocks.BlockStates.SoulSpongeBlock;
+import com.christopher.enhancedcraft.objects.blocks.BlockStates.StonePressurePlateBlockPublic;
+import com.christopher.enhancedcraft.objects.blocks.BlockStates.WoodButtonBlockPublic;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.fml.RegistryObject;
@@ -26,4 +28,28 @@ public class BlockInit {
     public static final RegistryObject<Block> CHARRED_SOUL_SPONGE = BLOCKS.register("charred_soul_sponge", () -> new CharredSoulSpongeBlock(Block.Properties.create(Material.SPONGE).hardnessAndResistance(0.6F).sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> SOUL_GLOWSTONE = BLOCKS.register("soul_glowstone",()-> new Block(Block.Properties.create(Material.GLASS, MaterialColor.SAND).hardnessAndResistance(0.3F).sound(SoundType.GLASS).lightValue(10)));
+
+    /* Wood Blocks */
+    public static final RegistryObject<Block> ANGEL_DOOR = BLOCKS.register("angel_door",
+            AngelDoor::new);
+    public static final RegistryObject<Block> ANGEL_HYPHAE = BLOCKS.register("angel_hyphae", AngelHyphae::new);
+    public static final RegistryObject<Block> ANGEL_PLANKS = BLOCKS.register("angel_planks", AngelPlanks::new);
+    public static final RegistryObject<Block> ANGEL_STEM = BLOCKS.register("angel_stem", AngelStem::new);
+    public static final RegistryObject<Block> ANGEL_TRAPDOOR = BLOCKS.register("angel_trapdoor", AngelTrapdoor::new);
+
+    // Angel Variants
+    public static final RegistryObject<Block> ANGEL_SLAB = BLOCKS.register("angel_slab",
+            () -> new SlabBlock(Block.Properties.from(BlockInit.ANGEL_PLANKS.get())));
+
+
+    /* Plants */
+    public static final RegistryObject<Block> ANGEL_WART = BLOCKS.register("angel_wart", () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> ANGEL_STAIRS = BLOCKS.register("angel_stairs",
+            () -> new StairsBlock(() -> BlockInit.ANGEL_PLANKS.get().getDefaultState(),Block.Properties.create(Material.EARTH, MaterialColor.WHITE_TERRACOTTA)));
+    public static final RegistryObject<Block> ANGEL_FENCE = BLOCKS.register("angel_fence",
+            () -> new FenceBlock(Block.Properties.create(Material.EARTH, MaterialColor.WHITE_TERRACOTTA)));
+    public static final RegistryObject<Block> ANGEL_BUTTON = BLOCKS.register("example_button",
+            () -> new WoodButtonBlockPublic(Block.Properties.create(Material.SAND, MaterialColor.WHITE_TERRACOTTA)));
+    public static final RegistryObject<Block> ANGEL_PRESSURE_PLATE = BLOCKS.register("angel_pressure_plate", StonePressurePlateBlockPublic::new);
+
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "enhancedcraft:blocks/angel_stem",
+    "side": "enhancedcraft:blocks/angel_stem"
+  }
+}
