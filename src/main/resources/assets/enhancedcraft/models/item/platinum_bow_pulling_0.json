@@ -1,0 +1,6 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "enhancedcraft:items/platinum_bow_pulling_0"
+    }
+}

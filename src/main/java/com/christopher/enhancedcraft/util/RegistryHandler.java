@@ -37,9 +37,14 @@ public class RegistryHandler {
     public static final RegistryObject<Item> PLATINUM_PICKAXE = ITEMS.register("platinum_pickaxe", PlatinumPick::new);
     public static final RegistryObject<Item> PLATINUM_AXE = ITEMS.register("platinum_axe", PlatinumAxe::new);
     public static final RegistryObject<Item> PLATINUM_SHOVEL = ITEMS.register("platinum_shovel", PlatinumShovel::new);
-    public static final RegistryObject<Item> PLATINUM_SWORD = ITEMS.register("platinum_sword", PlatinumSword::new);
     public static final RegistryObject<Item> PLATINUM_HOE = ITEMS.register("platinum_hoe", PlatinumHoe::new);
 
+    //Weapons
+    public static final RegistryObject<Item> PLATINUM_SWORD = ITEMS.register("platinum_sword", PlatinumSword::new);
+    /*
+    CANNOT BE USED, BUT FILES ARE PRESENT
+    public static final RegistryObject<Item> PLATINUM_BOW = ITEMS.register("platinum_bow",PlatinumBow::new);
+*/
 
     //BLOCKS
     public static final RegistryObject<Block> PLATINUM_BLOCK = BLOCKS.register("platinum_block", PlatinumBlock::new);
