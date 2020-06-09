@@ -21,7 +21,7 @@ public class SoulstoneVeinGen {
         for (Biome biome : ForgeRegistries.BIOMES) {
             if (biome == Biomes.NETHER) {
                 ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(5, 0, 0, 120));// Count, MinHeight, MaxHeightBase, MaxHeight
+                        .configure(new CountRangeConfig(10, 0, 0, 120));// Count, MinHeight, MaxHeightBase, MaxHeight
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
                         .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.SOULSTONE.get().getDefaultState(), 12))
                         .withPlacement(customConfig));
