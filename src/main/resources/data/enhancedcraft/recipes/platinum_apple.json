@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PAP",
+    "PPP"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:apple"
+    },
+    "P": {
+      "item": "enhancedcraft:platinum_ingot"
+    }
+  },
+  "result": {
+    "item": "enhancedcraft:platinum_apple"
+  }
+}

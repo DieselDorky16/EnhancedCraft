@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SXS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:soul_sand"
+    },
+    "X": {
+      "item": "minecraft:sponge"
+    }
+  },
+  "result": {
+    "item": "enhancedcraft:soul_sponge"
+  }
+}
