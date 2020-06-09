@@ -7,13 +7,17 @@ import com.christopher.enhancedcraft.contents.foods.PlatinumApple;
 import com.christopher.enhancedcraft.contents.items.OtherGroup;
 import com.christopher.enhancedcraft.contents.items.SoulMaterialsItem;
 import com.christopher.enhancedcraft.util.enums.PlatinumArmor;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import static net.minecraft.item.Items.BUCKET;
 
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS,

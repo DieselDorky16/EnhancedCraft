@@ -1,6 +1,7 @@
 package com.christopher.enhancedcraft;
 
 import com.christopher.enhancedcraft.init.BlockInit;
+import com.christopher.enhancedcraft.init.EnchantmentInit;
 import com.christopher.enhancedcraft.init.ItemInit;
 import com.christopher.enhancedcraft.util.RegistryHandler;
 import com.christopher.enhancedcraft.world.gen.PlatinumRemainsGen;
@@ -35,6 +36,7 @@ public class EnhancedcraftMod {
 
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
+        EnchantmentInit.ENCHANTMENTS.register(modEventBus);
 
 
         RegistryHandler.init();
