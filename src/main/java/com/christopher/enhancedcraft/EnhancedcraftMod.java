@@ -1,5 +1,6 @@
 package com.christopher.enhancedcraft;
 
+import com.christopher.enhancedcraft.init.BiomeInit;
 import com.christopher.enhancedcraft.init.BlockInit;
 import com.christopher.enhancedcraft.init.EnchantmentInit;
 import com.christopher.enhancedcraft.init.ItemInit;
@@ -34,6 +35,7 @@ public class EnhancedcraftMod {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
 
+        BiomeInit.BIOMES.register(modEventBus);
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         EnchantmentInit.ENCHANTMENTS.register(modEventBus);

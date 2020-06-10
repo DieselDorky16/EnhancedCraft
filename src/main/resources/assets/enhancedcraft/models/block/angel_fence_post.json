@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "enhancedcraft:blocks/angel_planks"
+  }
+}

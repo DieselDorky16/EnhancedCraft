@@ -33,16 +33,15 @@ public class BlockInit {
     public static final RegistryObject<Block> ANGEL_DOOR = BLOCKS.register("angel_door",
             AngelDoor::new);
     public static final RegistryObject<Block> ANGEL_HYPHAE = BLOCKS.register("angel_hyphae", AngelHyphae::new);
+    public static final RegistryObject<Block> STRIPPED_ANGEL_HYPHAE = BLOCKS.register("stripped_angel_hyphae", AngelHyphae::new);
     public static final RegistryObject<Block> ANGEL_PLANKS = BLOCKS.register("angel_planks", AngelPlanks::new);
     public static final RegistryObject<Block> ANGEL_STEM = BLOCKS.register("angel_stem", AngelStem::new);
+    public static final RegistryObject<Block> STRIPPED_ANGEL_STEM = BLOCKS.register("stripped_angel_stem", AngelStem::new);
     public static final RegistryObject<Block> ANGEL_TRAPDOOR = BLOCKS.register("angel_trapdoor", AngelTrapdoor::new);
 
     // Angel Variants
     public static final RegistryObject<Block> ANGEL_SLAB = BLOCKS.register("angel_slab",
             () -> new SlabBlock(Block.Properties.from(BlockInit.ANGEL_PLANKS.get())));
-
-
-    /* Plants */
     public static final RegistryObject<Block> ANGEL_WART = BLOCKS.register("angel_wart", () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> ANGEL_STAIRS = BLOCKS.register("angel_stairs",
             () -> new StairsBlock(() -> BlockInit.ANGEL_PLANKS.get().getDefaultState(),Block.Properties.create(Material.EARTH, MaterialColor.WHITE_TERRACOTTA)));

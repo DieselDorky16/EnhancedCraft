@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enhancedcraft:block/angel_slab"
+    },
+    "type=double": {
+      "model": "enhancedcraft:block/angel"
+    },
+    "type=top": {
+      "model": "enhancedcraft:block/angel_slab_top"
+    }
+  }
+}

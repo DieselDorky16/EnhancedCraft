@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "enhancedcraft:block/stripped_angel_stem",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "enhancedcraft:block/stripped_angel_stem"
+    },
+    "axis=z": {
+      "model": "enhancedcraft:block/stripped_angel_stem",
+      "x": 90
+    }
+  }
+}

@@ -39,6 +39,12 @@
   "block.enhancedcraft.soulstone_slab": "Soulstone Slab",
   "block.enhancedcraft.soulstone_stairs": "Soulstone Stairs",
   "block.enhancedcraft.soulstone_wall": "Soulstone Wall",
+  "block.enhancedcraft.stripped_angel_stem": "Stripped Angel Stem",
+  "block.enhancedcraft.stripped_angel_hyphae": "Stripped Angel Hyphae",
+
+  "biome.enhancedcraft.frozen_desert": "Frozen Desert",
+  "biome.enhancedcraft.plainshills": "Plains Hills",
+  "biome.enhancedcraft.plainsmountains": "Plains Mountains",
 
   "enchantment.enhancedcraft.ultrasharpness": "Ultrasharpness",
   "enchantment.enhancedcraft.withering": "Withering",

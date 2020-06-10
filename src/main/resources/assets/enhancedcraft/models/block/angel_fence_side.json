@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "enhancedcraft:blocks/angel_planks"
+  }
+}
