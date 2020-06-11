@@ -3,6 +3,7 @@ package com.christopher.enhancedcraft.init;
 import com.christopher.enhancedcraft.EnhancedcraftMod;
 
 import com.christopher.enhancedcraft.world.biome.FrozenDesert;
+import com.christopher.enhancedcraft.world.biome.MountainPeak;
 import com.christopher.enhancedcraft.world.biome.PlainsHills;
 import com.christopher.enhancedcraft.world.biome.PlainsMountains;
 import net.minecraft.block.Blocks;
@@ -33,17 +34,21 @@ public class BiomeInit {
     public static final RegistryObject<Biome> FROZEN_DESERT = BIOMES
             .register("frozen_desert",
                     FrozenDesert::new);
+    public static final RegistryObject<Biome> MOUNTAIN_PEAKS = BIOMES
+            .register("mountain_peaks",
+                    MountainPeak::new);
 
     public static void registerBiomes() {
         registerBiomes(PLAINS_HILLS.get(), Type.PLAINS, Type.OVERWORLD);
         registerBiomes(PLAINS_MOUNTAINS.get(), Type.PLAINS, Type.OVERWORLD);
         registerBiomes(FROZEN_DESERT.get(), Type.SNOWY, Type.OVERWORLD);
+        registerBiomes(MOUNTAIN_PEAKS.get(), Type.MOUNTAIN, Type.OVERWORLD);
     }
 
     private static void registerBiomes(Biome biome, Type... types) {
         // the line below will make it spawn in the overworld
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 5));
-        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 10));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 30));
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
 

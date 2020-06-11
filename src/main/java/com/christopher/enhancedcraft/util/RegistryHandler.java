@@ -172,4 +172,18 @@ public class RegistryHandler {
     );
     public static final RegistryObject<Item> ANGEL_FENCE_GATE_ITEM = ITEMS.register("angel_fence_gate", () -> new RedstoneBlockItemBase(BlockInit.ANGEL_FENCE_GATE.get())
     );
+
+    /*
+    Polished Bricks and/or Brick variants
+     */
+    public static final RegistryObject<Item> POLISHED_ANDESITE_BRICK_ITEM = ITEMS.register("polished_andesite_bricks", () -> new BuildBlockItemBase(BlockInit.POLISHED_ANDESITE_BRICKS.get())
+    );
+    public static final RegistryObject<Item> POLISHED_DIORITE_BRICK_ITEM = ITEMS.register("polished_diorite_bricks", () -> new BuildBlockItemBase(BlockInit.POLISHED_DIORITE_BRICKS.get())
+    );
+    public static final RegistryObject<Item> POLISHED_GRANITE_BRICK_ITEM = ITEMS.register("polished_granite_bricks", () -> new BuildBlockItemBase(BlockInit.POLISHED_GRANITE_BRICKS.get())
+    );
+    public static final RegistryObject<Item> RED_SANDSTONE_BRICK_ITEM = ITEMS.register("red_sandstone_bricks", () -> new BuildBlockItemBase(BlockInit.RED_SANDSTONE_BRICKS.get())
+    );
+    public static final RegistryObject<Item> SANDSTONE_BRICK_ITEM = ITEMS.register("sandstone_bricks", () -> new BuildBlockItemBase(BlockInit.SANDSTONE_BRICKS.get())
+    );
 }

@@ -1,11 +1,8 @@
 package com.christopher.enhancedcraft.init;
 
 import com.christopher.enhancedcraft.EnhancedcraftMod;
-import com.christopher.enhancedcraft.objects.blocks.BlockStates.CharredSoulSpongeBlock;
+import com.christopher.enhancedcraft.objects.blocks.BlockStates.*;
 import com.christopher.enhancedcraft.objects.blocks.BlockStates.NewWoodType.Angel.*;
-import com.christopher.enhancedcraft.objects.blocks.BlockStates.SoulSpongeBlock;
-import com.christopher.enhancedcraft.objects.blocks.BlockStates.StonePressurePlateBlockPublic;
-import com.christopher.enhancedcraft.objects.blocks.BlockStates.WoodButtonBlockPublic;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -38,6 +35,10 @@ public class BlockInit {
     public static final RegistryObject<Block> ANGEL_STEM = BLOCKS.register("angel_stem", AngelStem::new);
     public static final RegistryObject<Block> STRIPPED_ANGEL_STEM = BLOCKS.register("stripped_angel_stem", AngelStem::new);
     public static final RegistryObject<Block> ANGEL_TRAPDOOR = BLOCKS.register("angel_trapdoor", AngelTrapdoor::new);
+    /* NO SIGNS UNTIL I FIGURE THIS OUT
+    public static final RegistryObject<Block> ANGEL_SIGN = BLOCKS.register("angel_sign",()-> new StandingSignBlock(Block.Properties.from(BlockInit.ANGEL_PLANKS.get()), MoreWoodTypes.ANGEL));
+    public static final RegistryObject<Block> ANGEL_WALL_SIGN = BLOCKS.register("angel_wall_sign",()-> new WallSignBlock(Block.Properties.from(BlockInit.ANGEL_PLANKS.get()), MoreWoodTypes.ANGEL));
+     */
 
     // Angel Variants
     public static final RegistryObject<Block> ANGEL_SLAB = BLOCKS.register("angel_slab",
@@ -52,5 +53,15 @@ public class BlockInit {
     public static final RegistryObject<Block> ANGEL_BUTTON = BLOCKS.register("example_button",
             () -> new WoodButtonBlockPublic(Block.Properties.create(Material.SAND, MaterialColor.WHITE_TERRACOTTA)));
     public static final RegistryObject<Block> ANGEL_PRESSURE_PLATE = BLOCKS.register("angel_pressure_plate", StonePressurePlateBlockPublic::new);
+
+    /*
+    Polished Bricks and/or Bricks Variants Only
+     */
+
+    public static final RegistryObject<Block> POLISHED_ANDESITE_BRICKS = BLOCKS.register("polished_andesite_bricks", PolishedBricksVariant::new);
+    public static final RegistryObject<Block> POLISHED_DIORITE_BRICKS = BLOCKS.register("polished_diorite_bricks", PolishedBricksVariant::new);
+    public static final RegistryObject<Block> POLISHED_GRANITE_BRICKS = BLOCKS.register("polished_granite_bricks", PolishedBricksVariant::new);
+    public static final RegistryObject<Block> RED_SANDSTONE_BRICKS = BLOCKS.register("red_sandstone_bricks", PolishedBricksVariant::new);
+    public static final RegistryObject<Block> SANDSTONE_BRICKS = BLOCKS.register("sandstone_bricks", PolishedBricksVariant::new);
 
 }

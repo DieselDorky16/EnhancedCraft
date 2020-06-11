@@ -8,14 +8,18 @@ import com.christopher.enhancedcraft.objects.items.foods.SoulApple;
 import com.christopher.enhancedcraft.objects.items.OtherGroup;
 import com.christopher.enhancedcraft.objects.items.SoulMaterialsItem;
 import com.christopher.enhancedcraft.util.enums.PlatinumArmor;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.antlr.v4.runtime.misc.NotNull;
 
+@SuppressWarnings("deprecation")
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS,
             EnhancedcraftMod.MOD_ID);
@@ -46,4 +50,10 @@ public class ItemInit {
     //Foods
     public static final RegistryObject<Item> PLATINUM_APPLE = ITEMS.register("platinum_apple", PlatinumApple::new);
     public static final RegistryObject<Item> SOUL_APPLE = ITEMS.register("soul_apple", SoulApple::new);
+
+    //SIGNS
+    /*
+    NO SIGNS UNTIL I FIGURE THIS OUT
+    public static final RegistryObject<Item>  ANGEL_SIGN = ITEMS.register("angel_sign", () -> new SignItem((new Item.Properties()).maxStackSize(16).group(ItemGroup.DECORATIONS), BlockInit.ANGEL_SIGN.get(), BlockInit.ANGEL_WALL_SIGN.get())); */
+
 }
