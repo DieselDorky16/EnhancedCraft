@@ -1,9 +1,26 @@
 package com.christopher.enhancedcraft.init;
 
 import com.christopher.enhancedcraft.EnhancedcraftMod;
-import com.christopher.enhancedcraft.objects.blocks.BlockStates.*;
-import com.christopher.enhancedcraft.objects.blocks.BlockStates.NewWoodType.Angel.*;
-import net.minecraft.block.*;
+import com.christopher.enhancedcraft.objects.blocks.AngelFungusBlock;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.CharredSoulSpongeBlock;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.NewWoodType.Angel.AngelDoor;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.NewWoodType.Angel.AngelHyphae;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.NewWoodType.Angel.AngelPlanks;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.NewWoodType.Angel.AngelStem;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.NewWoodType.Angel.AngelTrapdoor;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.NewWoodType.Angel.AngelWart;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.PolishedBricksVariant;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.SoulSpongeBlock;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.StonePressurePlateBlockPublic;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.WoodButtonBlockPublic;
+import com.christopher.enhancedcraft.world.feature.AngelHugeFungus;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.fml.RegistryObject;
@@ -43,14 +60,14 @@ public class BlockInit {
     // Angel Variants
     public static final RegistryObject<Block> ANGEL_SLAB = BLOCKS.register("angel_slab",
             () -> new SlabBlock(Block.Properties.from(BlockInit.ANGEL_PLANKS.get())));
-    public static final RegistryObject<Block> ANGEL_WART = BLOCKS.register("angel_wart", () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> ANGEL_WART = BLOCKS.register("angel_wart", AngelWart::new);
     public static final RegistryObject<Block> ANGEL_STAIRS = BLOCKS.register("angel_stairs",
             () -> new StairsBlock(() -> BlockInit.ANGEL_PLANKS.get().getDefaultState(),Block.Properties.create(Material.EARTH, MaterialColor.WHITE_TERRACOTTA)));
     public static final RegistryObject<Block> ANGEL_FENCE = BLOCKS.register("angel_fence",
             () -> new FenceBlock(Block.Properties.create(Material.EARTH, MaterialColor.WHITE_TERRACOTTA)));
     public static final RegistryObject<Block> ANGEL_FENCE_GATE = BLOCKS.register("angel_fence_gate",
             () -> new FenceGateBlock(Block.Properties.create(Material.EARTH, MaterialColor.WHITE_TERRACOTTA)));
-    public static final RegistryObject<Block> ANGEL_BUTTON = BLOCKS.register("example_button",
+    public static final RegistryObject<Block> ANGEL_BUTTON = BLOCKS.register("angel_button",
             () -> new WoodButtonBlockPublic(Block.Properties.create(Material.SAND, MaterialColor.WHITE_TERRACOTTA)));
     public static final RegistryObject<Block> ANGEL_PRESSURE_PLATE = BLOCKS.register("angel_pressure_plate", StonePressurePlateBlockPublic::new);
 
@@ -64,4 +81,7 @@ public class BlockInit {
     public static final RegistryObject<Block> RED_SANDSTONE_BRICKS = BLOCKS.register("red_sandstone_bricks", PolishedBricksVariant::new);
     public static final RegistryObject<Block> SANDSTONE_BRICKS = BLOCKS.register("sandstone_bricks", PolishedBricksVariant::new);
 
+    //Saplings
+    public static final RegistryObject<Block> ANGEL_FUNGUS = BLOCKS.register("angel_fungus",
+            () -> new AngelFungusBlock(AngelHugeFungus::new, Block.Properties.from(Blocks.OAK_SAPLING)));
 }

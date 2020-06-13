@@ -1,0 +1,15 @@
+package com.christopher.enhancedcraft.objects.blocks.others.BlockStates;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraftforge.common.ToolType;
+
+public class Soulstone extends Block {
+    public Soulstone() {
+        super(Properties.create(Material.ROCK)
+                .hardnessAndResistance(6.0f,1.5f)
+                .harvestTool(ToolType.PICKAXE)
+                .sound(SoundType.STONE));
+    }
+}

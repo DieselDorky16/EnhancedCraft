@@ -1,15 +1,15 @@
 package com.christopher.enhancedcraft;
 
-import com.christopher.enhancedcraft.init.BiomeInit;
-import com.christopher.enhancedcraft.init.BlockInit;
-import com.christopher.enhancedcraft.init.EnchantmentInit;
-import com.christopher.enhancedcraft.init.ItemInit;
+import com.christopher.enhancedcraft.init.*;
 import com.christopher.enhancedcraft.util.RegistryHandler;
 import com.christopher.enhancedcraft.world.gen.PlatinumRemainsGen;
 import com.christopher.enhancedcraft.world.gen.SoulstoneVeinGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
@@ -22,11 +22,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod("enhancedcraft")
+@Mod.EventBusSubscriber(modid = EnhancedcraftMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EnhancedcraftMod {
 
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "enhancedcraft";
+    public static final ResourceLocation MORE_BIOMES_DIM_TYPE = new ResourceLocation(MOD_ID, "the_ultraoverworld");
+
 
     public EnhancedcraftMod() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -36,6 +39,7 @@ public class EnhancedcraftMod {
         modEventBus.addListener(this::setup);
 
         BiomeInit.BIOMES.register(modEventBus);
+        DimensionInit.MOD_DIMENSIONS.register(modEventBus);
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         EnchantmentInit.ENCHANTMENTS.register(modEventBus);
@@ -59,6 +63,12 @@ public class EnhancedcraftMod {
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
 //PlatinumRemainsGen.generateOre();
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
+        BiomeInit.registerBiomes();
+        LOGGER.debug("Biomes Registered!");
     }
 
     public static final ItemGroup SOUL_PRODUCTS = new ItemGroup("soul_products") {

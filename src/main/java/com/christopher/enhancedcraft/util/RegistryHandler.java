@@ -1,9 +1,9 @@
 package com.christopher.enhancedcraft.util;
 
 import com.christopher.enhancedcraft.EnhancedcraftMod;
-import com.christopher.enhancedcraft.objects.blocks.BlockItem.*;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockItem.*;
 import com.christopher.enhancedcraft.objects.items.ToolsRegistry.platinum.*;
-import com.christopher.enhancedcraft.objects.blocks.BlockStates.*;
+import com.christopher.enhancedcraft.objects.blocks.others.BlockStates.*;
 import com.christopher.enhancedcraft.objects.items.OtherGroup;
 import com.christopher.enhancedcraft.objects.items.SoulMaterialsItem;
 import com.christopher.enhancedcraft.init.BlockInit;
@@ -185,5 +185,9 @@ public class RegistryHandler {
     public static final RegistryObject<Item> RED_SANDSTONE_BRICK_ITEM = ITEMS.register("red_sandstone_bricks", () -> new BuildBlockItemBase(BlockInit.RED_SANDSTONE_BRICKS.get())
     );
     public static final RegistryObject<Item> SANDSTONE_BRICK_ITEM = ITEMS.register("sandstone_bricks", () -> new BuildBlockItemBase(BlockInit.SANDSTONE_BRICKS.get())
+    );
+
+    //FUNGUS
+    public static final RegistryObject<Item> ANGEL_FUNGUS_ITEM = ITEMS.register("angel_fungus", () -> new DecorativeBlocks(BlockInit.ANGEL_FUNGUS.get())
     );
 }

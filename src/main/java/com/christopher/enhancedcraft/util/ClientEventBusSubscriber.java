@@ -15,6 +15,7 @@ public class ClientEventBusSubscriber {
     public static void clientSetup(FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(BlockInit.ANGEL_DOOR.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.ANGEL_TRAPDOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.ANGEL_FUNGUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.GLAZED_SOUL_BLOCK.get(), RenderType.getTranslucent());
 
     }

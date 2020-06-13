@@ -1,20 +1,11 @@
 package com.christopher.enhancedcraft.init;
 
 import com.christopher.enhancedcraft.EnhancedcraftMod;
-
-import com.christopher.enhancedcraft.world.biome.FrozenDesert;
-import com.christopher.enhancedcraft.world.biome.MountainPeak;
-import com.christopher.enhancedcraft.world.biome.PlainsHills;
-import com.christopher.enhancedcraft.world.biome.PlainsMountains;
-import net.minecraft.block.Blocks;
+import com.christopher.enhancedcraft.world.biome.*;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biome.Category;
-import net.minecraft.world.biome.Biome.RainType;
-import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.ISurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
-import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
@@ -25,30 +16,67 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class BiomeInit {
     public static final DeferredRegister<Biome> BIOMES = new DeferredRegister<>(ForgeRegistries.BIOMES,
             EnhancedcraftMod.MOD_ID);
+    public static final RegistryObject<Biome> LUSH_PLAINS = BIOMES
+            .register("temperate_plains",
+                    LushPlains::new);
     public static final RegistryObject<Biome> PLAINS_HILLS = BIOMES
-            .register("plains_hils",
+            .register("plains_hills",
                     PlainsHills::new);
     public static final RegistryObject<Biome> PLAINS_MOUNTAINS = BIOMES
             .register("plains_mountains",
                     PlainsMountains::new);
     public static final RegistryObject<Biome> FROZEN_DESERT = BIOMES
             .register("frozen_desert",
-                    FrozenDesert::new);
+                    FrozenDesertBiome::new);
+    public static final RegistryObject<Biome> FROZEN_DESERT_HILLS = BIOMES
+            .register("frozen_desert_hills",
+                    FrozenDesertHillsBiome::new);
     public static final RegistryObject<Biome> MOUNTAIN_PEAKS = BIOMES
             .register("mountain_peaks",
                     MountainPeak::new);
+    public static final RegistryObject<Biome> SNOWY_SAVANNA = BIOMES
+            .register("snowy_savanna",
+                    SnowySavannaBiome::new);
+    public static final RegistryObject<Biome> SNOWY_SAVANNA_PLATEAU = BIOMES
+            .register("snowy_savanna_plateau",
+                    SnowySavannaPlateauBiome::new);
+    public static final RegistryObject<Biome> SNOWY_DARK_FOREST = BIOMES
+            .register("snowy_dark_forest",
+                    SnowyDarkForestBiome::new);
+    public static final RegistryObject<Biome> SNOWY_JUNGLE_EDGE = BIOMES
+            .register("snowy_jungle_edge",
+                    SnowyJungleEdgeBiome::new);
+    public static final RegistryObject<Biome> SNOWY_JUNGLE = BIOMES
+            .register("snowy_jungle",
+                    SnowyJungleBiome::new);
+    public static final RegistryObject<Biome> SNOWY_JUNGLE_HILLS = BIOMES
+            .register("snowy_jungle_hills",
+                    SnowyJungleHillsBiome::new);
+    public static final RegistryObject<Biome> FROZEN_SWAMP = BIOMES
+            .register("frozen_swamp",
+                    FrozenSwampBiome::new);
 
     public static void registerBiomes() {
-        registerBiomes(PLAINS_HILLS.get(), Type.PLAINS, Type.OVERWORLD);
-        registerBiomes(PLAINS_MOUNTAINS.get(), Type.PLAINS, Type.OVERWORLD);
-        registerBiomes(FROZEN_DESERT.get(), Type.SNOWY, Type.OVERWORLD);
-        registerBiomes(MOUNTAIN_PEAKS.get(), Type.MOUNTAIN, Type.OVERWORLD);
+        registerBiomes(LUSH_PLAINS.get(), Type.PLAINS, Type.LUSH, Type.OVERWORLD);
+        registerBiomes(PLAINS_HILLS.get(), Type.PLAINS, Type.HILLS, Type.OVERWORLD);
+        registerBiomes(PLAINS_MOUNTAINS.get(), Type.PLAINS, Type.MOUNTAIN, Type.OVERWORLD);
+        registerBiomes(FROZEN_DESERT.get(), Type.COLD, Type.SNOWY, Type.OVERWORLD);
+        registerBiomes(FROZEN_DESERT_HILLS.get(), Type.COLD, Type.HILLS, Type.SNOWY, Type.OVERWORLD);
+        registerBiomes(MOUNTAIN_PEAKS.get(), Type.MOUNTAIN, Type.RARE, Type.OVERWORLD);
+        registerBiomes(SNOWY_SAVANNA.get(), Type.COLD, Type.SNOWY, Type.SAVANNA, Type.OVERWORLD);
+        registerBiomes(SNOWY_SAVANNA_PLATEAU.get(), Type.COLD, Type.SNOWY, Type.SAVANNA, Type.PLATEAU, Type.OVERWORLD);
+        registerBiomes(SNOWY_DARK_FOREST.get(), Type.FOREST, Type.COLD, Type.OVERWORLD);
+        registerBiomes(SNOWY_JUNGLE.get(), Type.JUNGLE, Type.SNOWY, Type.COLD, Type.OVERWORLD);
+        registerBiomes(SNOWY_JUNGLE_HILLS.get(), Type.JUNGLE, Type.SNOWY, Type.COLD, Type.HILLS, Type.OVERWORLD);
+        registerBiomes(SNOWY_JUNGLE_EDGE.get(), Type.JUNGLE, Type.SNOWY, Type.COLD, Type.RARE, Type.OVERWORLD);
+        registerBiomes(FROZEN_SWAMP.get(), Type.SWAMP, Type.SNOWY, Type.COLD, Type.OVERWORLD);
     }
 
     private static void registerBiomes(Biome biome, Type... types) {
         // the line below will make it spawn in the overworld
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 5));
-        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 30));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 10));
+        BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(biome, 10));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 10));
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
 
