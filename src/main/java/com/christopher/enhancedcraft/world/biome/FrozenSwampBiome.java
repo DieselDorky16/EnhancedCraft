@@ -25,7 +25,6 @@ public class FrozenSwampBiome extends Biome {
         DefaultBiomeFeatures.addSwampClayDisks(this);
         DefaultBiomeFeatures.addSwampVegetation(this);
         DefaultBiomeFeatures.addMushrooms(this);
-        DefaultBiomeFeatures.addExtraReedsAndPumpkins(this);
         DefaultBiomeFeatures.addSprings(this);
         DefaultBiomeFeatures.addFossils(this);
         DefaultBiomeFeatures.addFreezeTopLayer(this);

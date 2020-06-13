@@ -47,10 +47,10 @@
   "block.enhancedcraft.stripped_angel_stem": "Stripped Angel Stem",
   "block.enhancedcraft.stripped_angel_hyphae": "Stripped Angel Hyphae",
 
+  "biome.enhancedcraft.deep_snowy_tundara": "Deep Snowy Tundra",
   "biome.enhancedcraft.frozen_desert": "Frozen Desert",
   "biome.enhancedcraft.frozen_desert_hills": "Frozen Desert Hills",
   "biome.enhancedcraft.frozen_swamp": "Frozen Swamp",
-  "biome.enhancedcraft.temperate_plains": "Temperate Plains",
   "biome.enhancedcraft.mountain_peaks": "Mountain Peaks",
   "biome.enhancedcraft.plains_hills": "Plains Hills",
   "biome.enhancedcraft.plains_mountains": "Plains Mountains",
@@ -60,6 +60,7 @@
   "biome.enhancedcraft.snowy_savanna": "Snowy Savanna",
   "biome.enhancedcraft.snowy_savanna_plateau": "Snowy Savanna Plateau",
   "biome.enhancedcraft.snowy_dark_forest": "Snowy Dark Forest",
+  "biome.enhancedcraft.wooded_mountain_peaks": "Wooded Mountain Peaks",
 
   "enchantment.enhancedcraft.ultrasharpness": "Ultrasharpness",
   "enchantment.enhancedcraft.withering": "Withering",
