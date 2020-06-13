@@ -3,7 +3,6 @@ package com.christopher.enhancedcraft.world.dimension;
 import com.christopher.enhancedcraft.init.BiomeInit;
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.biome.provider.BiomeProvider;
 
 import java.util.LinkedList;
@@ -13,7 +12,7 @@ import java.util.Set;
 
 public class MoreBiomesBiomeProvider  extends BiomeProvider {
 
-    private static final Set<Biome> biomeList = ImmutableSet.of(BiomeInit.PLAINS_HILLS.get(),BiomeInit.PLAINS_MOUNTAINS.get(),BiomeInit.MOUNTAIN_PEAKS.get(),BiomeInit.DEEP_SNOWY_TUNDRA.get(),BiomeInit.FROZEN_DESERT.get(), BiomeInit.SNOWY_SAVANNA.get(),BiomeInit.SNOWY_SAVANNA_PLATEAU.get(), BiomeInit.SNOWY_DARK_FOREST.get(), Biomes.PLAINS, Biomes.SWAMP);
+    private static final Set<Biome> biomeList = ImmutableSet.of(BiomeInit.ANGELWOOD_FOREST.get());
     private Random rand;
     private final double biomeSize = 32.0D;
     private VoronoiGenerator biomeNoise;

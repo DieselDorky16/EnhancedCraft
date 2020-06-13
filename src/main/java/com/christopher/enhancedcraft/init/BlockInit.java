@@ -18,6 +18,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FenceGateBlock;
+import net.minecraft.block.MyceliumBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
@@ -52,6 +53,7 @@ public class BlockInit {
     public static final RegistryObject<Block> ANGEL_STEM = BLOCKS.register("angel_stem", AngelStem::new);
     public static final RegistryObject<Block> STRIPPED_ANGEL_STEM = BLOCKS.register("stripped_angel_stem", AngelStem::new);
     public static final RegistryObject<Block> ANGEL_TRAPDOOR = BLOCKS.register("angel_trapdoor", AngelTrapdoor::new);
+    public static final RegistryObject<Block> ANGEL_NYLIUM = BLOCKS.register("angel_nylium", () -> new MyceliumBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.WHITE_TERRACOTTA).hardnessAndResistance(0.6F).sound(SoundType.PLANT)));
     /* NO SIGNS UNTIL I FIGURE THIS OUT
     public static final RegistryObject<Block> ANGEL_SIGN = BLOCKS.register("angel_sign",()-> new StandingSignBlock(Block.Properties.from(BlockInit.ANGEL_PLANKS.get()), MoreWoodTypes.ANGEL));
     public static final RegistryObject<Block> ANGEL_WALL_SIGN = BLOCKS.register("angel_wall_sign",()-> new WallSignBlock(Block.Properties.from(BlockInit.ANGEL_PLANKS.get()), MoreWoodTypes.ANGEL));

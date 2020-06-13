@@ -28,7 +28,7 @@ public class EnhancedcraftMod {
 
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "enhancedcraft";
-    public static final ResourceLocation MORE_BIOMES_DIM_TYPE = new ResourceLocation(MOD_ID, "the_ultraoverworld");
+    public static final ResourceLocation MORE_BIOMES_DIM_TYPE = new ResourceLocation(MOD_ID, "angelwood_lands");
 
 
     public EnhancedcraftMod() {

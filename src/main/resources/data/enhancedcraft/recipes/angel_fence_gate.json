@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SAS",
+    "SAS"
+  ],
+  "key": {
+    "A": {
+      "item": "enhancedcraft:angel_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "enhancedcraft:angel_fence_gate"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "enhancedcraft:angel_planks"
+    }
+  },
+  "result": {
+    "item": "minecraft:crafting_table"
+  }
+}

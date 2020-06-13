@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "enhancedcraft:angel_planks"
+    }
+  },
+  "result": {
+    "item": "enhancedcraft:angel_door",
+    "count": 3
+  }
+}

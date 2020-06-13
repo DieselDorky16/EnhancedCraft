@@ -9,5 +9,5 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class DimensionInit {
     public static final DeferredRegister<ModDimension> MOD_DIMENSIONS = new DeferredRegister<> (ForgeRegistries.MOD_DIMENSIONS, EnhancedcraftMod.MOD_ID);
-    public static final RegistryObject<ModDimension> MORE_BIOMES_DIM = MOD_DIMENSIONS.register("more_biomes",()-> new MoreBiomesDimension());
+    public static final RegistryObject<ModDimension> MORE_BIOMES_DIM = MOD_DIMENSIONS.register("angelwood_lands",()-> new MoreBiomesDimension());
 }

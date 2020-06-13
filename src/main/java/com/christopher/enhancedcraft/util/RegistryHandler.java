@@ -192,7 +192,9 @@ public class RegistryHandler {
     public static final RegistryObject<Item> SANDSTONE_BRICK_ITEM = ITEMS.register("sandstone_bricks", () -> new BuildBlockItemBase(BlockInit.SANDSTONE_BRICKS.get())
     );
 
-    //FUNGUS
+    //LIFE
     public static final RegistryObject<Item> ANGEL_FUNGUS_ITEM = ITEMS.register("angel_fungus", () -> new DecorativeBlocks(BlockInit.ANGEL_FUNGUS.get())
+    );
+    public static final RegistryObject<Item> ANGEL_NYLIUM_ITEM = ITEMS.register("angel_nylium", () -> new DecorativeBlocks(BlockInit.ANGEL_NYLIUM.get())
     );
 }

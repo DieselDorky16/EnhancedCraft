@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "enhancedcraft:blocks/angel_nylium",
+    "bottom": "minecraft:block/netherrack",
+    "side": "enhancedcraft:blocks/angel_nylium_side"
+  }
+}
