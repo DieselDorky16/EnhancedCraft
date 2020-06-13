@@ -54,6 +54,8 @@ public class RegistryHandler {
     public static final RegistryObject<Block> SOUL_END_ROD = BLOCKS.register("soul_end_rod", SoulEndRod::new);
     public static final RegistryObject<Block> SOUL_REDSTONE_LAMP = BLOCKS.register("soul_redstone_lamp", SoulRedstoneLamp::new);
     public static final RegistryObject<Block> GLAZED_SOUL_BLOCK = BLOCKS.register("glazed_soulstone", GlazedSoulBlock::new);
+    public static final RegistryObject<Block> PACKED_GLAZED_SOULSTONE_BLOCK = BLOCKS.register("packed_glazed_soulstone", PackedGlazedSoulBlock::new);
+    public static final RegistryObject<Block> MAGMA_GLAZED_SOULSTONE_BLOCK = BLOCKS.register("magma_glazed_soulstone", MagmaGlazedSoulBlock::new);
 
 
     //Soulstone BlockBases
@@ -99,6 +101,9 @@ public class RegistryHandler {
     public static final RegistryObject<Item> SOUL_REDSTONE_LAMP_ITEM = ITEMS.register("soul_redstone_lamp", () -> new RedstoneBlockItemBase(SOUL_REDSTONE_LAMP.get()));
     public static final RegistryObject<Item> SOUL_GLOWSTONE_ITEM = ITEMS.register("soul_glowstone", () -> new BuildBlockItemBase(BlockInit.SOUL_GLOWSTONE.get()));
     public static final RegistryObject<Item> GLAZED_SOUL_BLOCK_ITEM = ITEMS.register("glazed_soulstone", () -> new BuildBlockItemBase(GLAZED_SOUL_BLOCK.get()));
+    public static final RegistryObject<Item> PACKED_GLAZED_SOUL_BLOCK_ITEM = ITEMS.register("packed_glazed_soulstone", () -> new BuildBlockItemBase(PACKED_GLAZED_SOULSTONE_BLOCK.get()));
+    public static final RegistryObject<Item> MAGMA_GLAZED_SOUL_BLOCK_ITEM = ITEMS.register("magma_glazed_soulstone", () -> new BuildBlockItemBase(MAGMA_GLAZED_SOULSTONE_BLOCK.get()));
+
 
     //Soulstone BlockItem
     public static final RegistryObject<Item> SOULSTONE_ITEM = ITEMS.register("soulstone", () -> new BuildBlockItemBase(SOULSTONE.get()));

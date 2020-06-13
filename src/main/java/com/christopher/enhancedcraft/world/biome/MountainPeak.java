@@ -12,7 +12,7 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
 public class MountainPeak extends Biome {
     public MountainPeak() {
-        super((new Biome.Builder()).surfaceBuilder(SurfaceBuilder.MOUNTAIN, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG).precipitation(Biome.RainType.RAIN).category(Biome.Category.EXTREME_HILLS).depth(3.0F).scale(1.30F).temperature(0.25F).downfall(1.0F).waterColor(31735).waterFogColor(31735).parent("mountains"));
+        super((new Biome.Builder()).surfaceBuilder(SurfaceBuilder.MOUNTAIN, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG).precipitation(Biome.RainType.RAIN).category(Biome.Category.EXTREME_HILLS).depth(3.0F).scale(1.30F).temperature(0.2F).downfall(1.0F).waterColor(31735).waterFogColor(31735).parent("mountains"));
         this.addStructure(Feature.MINESHAFT.withConfiguration(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
         this.addStructure(Feature.STRONGHOLD.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         DefaultBiomeFeatures.addCarvers(this);

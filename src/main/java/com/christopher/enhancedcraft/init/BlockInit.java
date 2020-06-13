@@ -84,4 +84,5 @@ public class BlockInit {
     //Saplings
     public static final RegistryObject<Block> ANGEL_FUNGUS = BLOCKS.register("angel_fungus",
             () -> new AngelFungusBlock(AngelHugeFungus::new, Block.Properties.from(Blocks.OAK_SAPLING)));
+
 }
