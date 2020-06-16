@@ -66,7 +66,7 @@ public class BiomeInit {
         registerBiomes(SNOWY_DARK_FOREST.get(), Type.FOREST, Type.COLD, Type.OVERWORLD);
         registerBiomes(FROZEN_SWAMP.get(), Type.SWAMP, Type.SNOWY, Type.COLD, Type.OVERWORLD);
         registerBiomes(DEEP_SNOWY_TUNDRA.get(), Type.SNOWY, Type.COLD, Type.OVERWORLD);
-        registerBiomes(ANGELWOOD_FOREST.get(), Type.HOT, Type.SANDY, Type.DRY, Type.OVERWORLD);
+        registerBiomes(ANGELWOOD_FOREST.get(), Type.HOT, Type.DRY, Type.NETHER);
     }
 
 

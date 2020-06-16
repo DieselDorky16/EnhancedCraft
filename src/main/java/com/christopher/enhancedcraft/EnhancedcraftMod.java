@@ -1,11 +1,14 @@
 package com.christopher.enhancedcraft;
 
-import com.christopher.enhancedcraft.init.*;
-import com.christopher.enhancedcraft.util.RegistryHandler;
+import com.christopher.enhancedcraft.init.BiomeInit;
+import com.christopher.enhancedcraft.init.BlockInit;
+import com.christopher.enhancedcraft.init.BlockItemInit;
+import com.christopher.enhancedcraft.init.DimensionInit;
+import com.christopher.enhancedcraft.init.EnchantmentInit;
+import com.christopher.enhancedcraft.init.ItemInit;
+import com.christopher.enhancedcraft.init.PotionInit;
 import com.christopher.enhancedcraft.world.gen.PlatinumRemainsGen;
 import com.christopher.enhancedcraft.world.gen.SoulstoneVeinGen;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
@@ -43,11 +46,13 @@ public class EnhancedcraftMod {
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         EnchantmentInit.ENCHANTMENTS.register(modEventBus);
-
-
-        RegistryHandler.init();
+        PotionInit.POTION_EFFECTS.register(modEventBus);
+        BlockItemInit.init();
 
         MinecraftForge.EVENT_BUS.register(this);
+        LOGGER.info("All elements of the mod have been initialized!");
+        LOGGER.debug("All elements of the mod should have been initialized!. If you are not seeing anything, or if the mod won't load, please use GitHub to report any issues!");
+
     }
 
     @Deprecated //Do not remove or it will break the mod.
@@ -55,26 +60,22 @@ public class EnhancedcraftMod {
 
         DeferredWorkQueue.runLater(PlatinumRemainsGen::generateOre);
         DeferredWorkQueue.runLater(SoulstoneVeinGen::generateOre);
-    }
+        LOGGER.info("All ores have been registered!");
+        LOGGER.debug("The ores in this mod should have been generated. If you are not seeing any ores, please use GitHub to report any issues!");
+
+    } //K9#8016
 
     private void doClientStuff(final FMLClientSetupEvent event) {
     }
 
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
-//PlatinumRemainsGen.generateOre();
     }
 
     @SubscribeEvent
     public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
         BiomeInit.registerBiomes();
-        LOGGER.debug("Biomes Registered!");
+        LOGGER.info("Biomes successfully registered!");
+        LOGGER.debug("The biomes in this mod should have been generated. If you are not seeing any biomes naturally generate, please use GitHub to report any issues!");
     }
-
-    public static final ItemGroup SOUL_PRODUCTS = new ItemGroup("soul_products") {
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.SOUL_MAGMA_BLOCK.get());
-        }
-    };
 }

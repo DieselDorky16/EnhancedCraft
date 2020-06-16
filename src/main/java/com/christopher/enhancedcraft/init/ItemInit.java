@@ -1,32 +1,53 @@
 package com.christopher.enhancedcraft.init;
 
 import com.christopher.enhancedcraft.EnhancedcraftMod;
-import com.christopher.enhancedcraft.objects.items.ToolsRegistry.platinum.PlatinumShears;
-import com.christopher.enhancedcraft.objects.items.ToolsRegistry.platinum.PlatinumSteel;
-import com.christopher.enhancedcraft.objects.items.foods.PlatinumApple;
-import com.christopher.enhancedcraft.objects.items.foods.SoulApple;
-import com.christopher.enhancedcraft.objects.items.OtherGroup;
-import com.christopher.enhancedcraft.objects.items.SoulMaterialsItem;
+import com.christopher.enhancedcraft.util.enums.NewDyeColor;
+import com.christopher.enhancedcraft.item.NewDyeItem;
+import com.christopher.enhancedcraft.item.OtherGroup;
+import com.christopher.enhancedcraft.item.PlatinumAxe;
+import com.christopher.enhancedcraft.item.PlatinumHoe;
+import com.christopher.enhancedcraft.item.PlatinumPick;
+import com.christopher.enhancedcraft.item.PlatinumShears;
+import com.christopher.enhancedcraft.item.PlatinumShovel;
+import com.christopher.enhancedcraft.item.PlatinumSteel;
+import com.christopher.enhancedcraft.item.PlatinumSword;
+import com.christopher.enhancedcraft.item.PlatinumApple;
+import com.christopher.enhancedcraft.item.SoulApple;
 import com.christopher.enhancedcraft.util.enums.PlatinumArmor;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.antlr.v4.runtime.misc.NotNull;
 
 @SuppressWarnings("deprecation")
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS,
             EnhancedcraftMod.MOD_ID);
+
+    //Raw Materials (No Base Ingots or Equivalent, please see ItemInit Class)
+    public static final RegistryObject<Item> PLATINUM_SCRAP = ITEMS.register("platinum_scrap", OtherGroup::new);
+    public static final RegistryObject<Item> SOUL_MAGMA_CREAM = ITEMS.register("soul_magma_cream", OtherGroup::new);
+
+    //Tools
+    public static final RegistryObject<Item> PLATINUM_PICKAXE = ITEMS.register("platinum_pickaxe", PlatinumPick::new);
+    public static final RegistryObject<Item> PLATINUM_AXE = ITEMS.register("platinum_axe", PlatinumAxe::new);
+    public static final RegistryObject<Item> PLATINUM_SHOVEL = ITEMS.register("platinum_shovel", PlatinumShovel::new);
+    public static final RegistryObject<Item> PLATINUM_HOE = ITEMS.register("platinum_hoe", PlatinumHoe::new);
+
+    //Weapons
+    public static final RegistryObject<Item> PLATINUM_SWORD = ITEMS.register("platinum_sword", PlatinumSword::new);
+    /*
+    CANNOT BE USED, BUT FILES ARE PRESENT
+    public static final RegistryObject<Item> PLATINUM_BOW = ITEMS.register("platinum_bow",PlatinumBow::new);
+*/
+
     public static final RegistryObject<Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot", OtherGroup::new);
 
     //Items
-    public static final RegistryObject<Item> SOULGLASS = ITEMS.register("soulglass", SoulMaterialsItem::new);
+    public static final RegistryObject<Item> SOULGLASS = ITEMS.register("soulglass", OtherGroup::new);
 
     //Tools
     public static final RegistryObject<Item> PLATINUM_AND_STEEL = ITEMS.register("platinum_and_steel", PlatinumSteel::new);
@@ -55,5 +76,8 @@ public class ItemInit {
     /*
     NO SIGNS UNTIL I FIGURE THIS OUT
     public static final RegistryObject<Item>  ANGEL_SIGN = ITEMS.register("angel_sign", () -> new SignItem((new Item.Properties()).maxStackSize(16).group(ItemGroup.DECORATIONS), BlockInit.ANGEL_SIGN.get(), BlockInit.ANGEL_WALL_SIGN.get())); */
+
+    //DYES
+    public static final RegistryObject<Item> MAROON_DYE = ITEMS.register("maroon_dye", () -> new NewDyeItem(NewDyeColor.MAROON, (new Item.Properties()).group(ItemGroup.MATERIALS)));
 
 }

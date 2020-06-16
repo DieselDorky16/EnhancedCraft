@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "enhancedcraft:blocks/maroon_wool"
+  }
+}

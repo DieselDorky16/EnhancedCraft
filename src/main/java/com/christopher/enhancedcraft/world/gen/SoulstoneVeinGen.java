@@ -1,6 +1,6 @@
 package com.christopher.enhancedcraft.world.gen;
 
-import com.christopher.enhancedcraft.util.RegistryHandler;
+import com.christopher.enhancedcraft.init.BlockInit;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
@@ -23,7 +23,7 @@ public class SoulstoneVeinGen {
                 ConfiguredPlacement customConfig = Placement.COUNT_RANGE
                         .configure(new CountRangeConfig(10, 0, 0, 120));// Count, MinHeight, MaxHeightBase, MaxHeight
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.SOULSTONE.get().getDefaultState(), 12))
+                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockInit.SOULSTONE.get().getDefaultState(), 12))
                         .withPlacement(customConfig));
             }
             /*

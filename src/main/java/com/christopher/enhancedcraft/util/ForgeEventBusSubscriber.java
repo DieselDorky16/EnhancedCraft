@@ -13,7 +13,7 @@ public class ForgeEventBusSubscriber {
     @SubscribeEvent
     public static void registerDimensions(final RegisterDimensionsEvent event) {
 if (DimensionType.byName(EnhancedcraftMod.MORE_BIOMES_DIM_TYPE) == null) {
-            DimensionManager.registerDimension(EnhancedcraftMod.MORE_BIOMES_DIM_TYPE, DimensionInit.MORE_BIOMES_DIM.get(),null, true);
+            DimensionManager.registerDimension(EnhancedcraftMod.MORE_BIOMES_DIM_TYPE, DimensionInit.ANGELWOOD_LANDS_DIM.get(),null, false);
         }
         EnhancedcraftMod.LOGGER.info("Dimensions Registered!");
     }
