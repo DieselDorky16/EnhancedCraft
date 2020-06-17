@@ -1,9 +1,9 @@
 package com.christopher.enhancedcraft.init;
 
 import com.christopher.enhancedcraft.EnhancedcraftMod;
-import com.christopher.enhancedcraft.util.enums.NewDyeColor;
 import com.christopher.enhancedcraft.item.NewDyeItem;
 import com.christopher.enhancedcraft.item.OtherGroup;
+import com.christopher.enhancedcraft.item.PlatinumApple;
 import com.christopher.enhancedcraft.item.PlatinumAxe;
 import com.christopher.enhancedcraft.item.PlatinumHoe;
 import com.christopher.enhancedcraft.item.PlatinumPick;
@@ -11,8 +11,8 @@ import com.christopher.enhancedcraft.item.PlatinumShears;
 import com.christopher.enhancedcraft.item.PlatinumShovel;
 import com.christopher.enhancedcraft.item.PlatinumSteel;
 import com.christopher.enhancedcraft.item.PlatinumSword;
-import com.christopher.enhancedcraft.item.PlatinumApple;
 import com.christopher.enhancedcraft.item.SoulApple;
+import com.christopher.enhancedcraft.util.enums.NewDyeColor;
 import com.christopher.enhancedcraft.util.enums.PlatinumArmor;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -89,4 +89,6 @@ public class ItemInit {
     public static final RegistryObject<Item> DONKEY_LEATHER = ITEMS.register("donkey_leather", () -> new Item((new Item.Properties()).group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> RED_MOOSHROOM_LEATHER = ITEMS.register("red_mooshroom_leather", () -> new Item((new Item.Properties()).group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> BROWN_MOOSHROOM_LEATHER = ITEMS.register("brown_mooshroom_leather", () -> new Item((new Item.Properties()).group(ItemGroup.MATERIALS)));
+
 }
+

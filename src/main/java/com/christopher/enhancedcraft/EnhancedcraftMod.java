@@ -46,6 +46,7 @@ public class EnhancedcraftMod {
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         EnchantmentInit.ENCHANTMENTS.register(modEventBus);
+        PotionInit.POTIONS.register(modEventBus);
         PotionInit.POTION_EFFECTS.register(modEventBus);
         BlockItemInit.init();
 
