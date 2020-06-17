@@ -49,6 +49,12 @@ public class BiomeInit {
     public static final RegistryObject<Biome> DEEP_SNOWY_TUNDRA = BIOMES
             .register("deep_snowy_tundra",
                     DeepSnowyTundraBiome::new);
+    public static final RegistryObject<Biome> FROZEN_MUSHROOM_FIELDS = BIOMES
+            .register("frozen_mushroom_fields",
+                    FrozenMushroomFieldsBiome::new);
+    public static final RegistryObject<Biome> FROZEN_MUSHROOM_FIELDS_SHORE = BIOMES
+            .register("frozen_mushroom_fields_shore",
+                    FrozenMushroomFieldShoreBiome::new);
     public static final RegistryObject<Biome> ANGELWOOD_FOREST = BIOMES
             .register("angelwood_forest",
                     AngelwoodForest::new);
@@ -66,16 +72,17 @@ public class BiomeInit {
         registerBiomes(SNOWY_DARK_FOREST.get(), Type.FOREST, Type.COLD, Type.OVERWORLD);
         registerBiomes(FROZEN_SWAMP.get(), Type.SWAMP, Type.SNOWY, Type.COLD, Type.OVERWORLD);
         registerBiomes(DEEP_SNOWY_TUNDRA.get(), Type.SNOWY, Type.COLD, Type.OVERWORLD);
+        registerBiomes(DEEP_SNOWY_TUNDRA.get(), Type.SNOWY, Type.MUSHROOM, Type.RARE, Type.COLD, Type.OVERWORLD);
         registerBiomes(ANGELWOOD_FOREST.get(), Type.HOT, Type.DRY, Type.NETHER);
     }
 
 
     private static void registerBiomes(Biome biome, Type... types) {
         // the line below will make it spawn in the overworld
-        BiomeManager.addBiome(BiomeManager.BiomeType.DESERT, new BiomeManager.BiomeEntry(biome, 10));
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 10));
-        BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(biome, 10));
-        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 10));
+        BiomeManager.addBiome(BiomeManager.BiomeType.DESERT, new BiomeManager.BiomeEntry(biome, 5));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 5));
+        BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(biome, 5));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 5));
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
 

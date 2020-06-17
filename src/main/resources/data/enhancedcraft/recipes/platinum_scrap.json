@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "minecraft:platinum_remains"
+    "item": "enhancedcraft:platinum_remains"
   },
   "result": "enhancedcraft:platinum_scrap",
   "experience": 2.0,
