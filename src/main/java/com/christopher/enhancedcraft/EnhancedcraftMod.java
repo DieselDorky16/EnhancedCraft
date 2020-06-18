@@ -8,6 +8,8 @@ import com.christopher.enhancedcraft.init.DimensionInit;
 import com.christopher.enhancedcraft.init.EnchantmentInit;
 import com.christopher.enhancedcraft.init.ItemInit;
 import com.christopher.enhancedcraft.init.PotionInit;
+import com.christopher.enhancedcraft.init.vanilla.VanillaBlockInit;
+import com.christopher.enhancedcraft.init.vanilla.VanillaBlockItemInit;
 import com.christopher.enhancedcraft.world.gen.PlatinumRemainsGen;
 import com.christopher.enhancedcraft.world.gen.SoulstoneVeinGen;
 import net.minecraft.util.ResourceLocation;
@@ -59,6 +61,10 @@ public class EnhancedcraftMod {
         PotionInit.POTIONS.register(modEventBus);
         PotionInit.POTION_EFFECTS.register(modEventBus);
         BlockItemInit.init();
+
+        //Vanilla Elements Only
+        VanillaBlockInit.BLOCKS.register(modEventBus);
+        VanillaBlockItemInit.init();
 
         MinecraftForge.EVENT_BUS.register(this);
         LOGGER.info("All elements of the mod have been initialized!");
