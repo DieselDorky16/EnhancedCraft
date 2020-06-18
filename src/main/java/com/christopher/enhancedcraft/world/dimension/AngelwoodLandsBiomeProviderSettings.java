@@ -4,18 +4,18 @@ import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.provider.IBiomeProviderSettings;
 import net.minecraft.world.storage.WorldInfo;
 
-public class MoreBiomesBiomeProviderSettings implements IBiomeProviderSettings {
+public class AngelwoodLandsBiomeProviderSettings implements IBiomeProviderSettings {
 
     private final long seed;
     private final WorldType worldType;
-    private MoreBiomesGenSettings generatorSettings = new MoreBiomesGenSettings();
+    private AngelwoodLandsGenSettings generatorSettings = new AngelwoodLandsGenSettings();
 
-    public MoreBiomesBiomeProviderSettings(WorldInfo info) {
+    public AngelwoodLandsBiomeProviderSettings(WorldInfo info) {
         this.seed = info.getSeed();
         this.worldType = info.getGenerator();
     }
 
-    public MoreBiomesBiomeProviderSettings setGeneratorSettings(MoreBiomesGenSettings settings) {
+    public AngelwoodLandsBiomeProviderSettings setGeneratorSettings(AngelwoodLandsGenSettings settings) {
         this.generatorSettings = settings;
         return this;
     }
@@ -28,7 +28,7 @@ public class MoreBiomesBiomeProviderSettings implements IBiomeProviderSettings {
         return this.worldType;
     }
 
-    public MoreBiomesGenSettings getGeneratorSettings() {
+    public AngelwoodLandsGenSettings getGeneratorSettings() {
         return this.generatorSettings;
     }
 }

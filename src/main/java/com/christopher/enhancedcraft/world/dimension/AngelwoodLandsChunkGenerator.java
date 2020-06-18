@@ -13,7 +13,7 @@ import net.minecraft.world.gen.OctavesNoiseGenerator;
 
 import java.util.List;
 
-public class MoreBiomesChunkGenerator  extends NoiseChunkGenerator<MoreBiomesGenSettings> {
+public class AngelwoodLandsChunkGenerator extends NoiseChunkGenerator<AngelwoodLandsGenSettings> {
     private static final float[] field_222576_h = Util.make(new float[25], (p_222575_0_) -> {
         for (int i = -2; i <= 2; ++i) {
             for (int j = -2; j <= 2; ++j) {
@@ -26,7 +26,7 @@ public class MoreBiomesChunkGenerator  extends NoiseChunkGenerator<MoreBiomesGen
     private final OctavesNoiseGenerator depthNoise;
     private final boolean isAmplified;
 
-    public MoreBiomesChunkGenerator(IWorld worldIn, BiomeProvider provider, MoreBiomesGenSettings settingsIn) {
+    public AngelwoodLandsChunkGenerator(IWorld worldIn, BiomeProvider provider, AngelwoodLandsGenSettings settingsIn) {
         super(worldIn, provider, 4, 8, 256, settingsIn, true);
         this.randomSeed.skip(2620);
         this.depthNoise = new OctavesNoiseGenerator(this.randomSeed, 15, 0);

@@ -29,7 +29,7 @@ public class PotionInit {
 
     public static final RegistryObject<Potion> HASTE = POTION_EFFECTS.register("haste", () -> new Potion(new EffectInstance(Effects.HASTE, 3600, 0)));
     public static final RegistryObject<Potion> STRONG_HASTE = POTION_EFFECTS.register("strong_haste", () -> new Potion("haste",new EffectInstance(Effects.HASTE, 1800, 1)));
-    RegistryObject<Potion> LONG_HASTE = POTION_EFFECTS.register("long_haste", () -> new Potion("haste", new EffectInstance(Effects.HASTE, 9600)));
+    RegistryObject<Potion> LONG_HASTE = POTION_EFFECTS.register("long_haste", () -> new Potion("haste", new EffectInstance(Effects.HASTE, 9600,0)));
 
 
 }

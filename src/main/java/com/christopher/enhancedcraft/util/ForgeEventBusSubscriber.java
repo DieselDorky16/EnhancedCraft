@@ -12,8 +12,8 @@ import net.minecraftforge.fml.common.Mod;
 public class ForgeEventBusSubscriber {
     @SubscribeEvent
     public static void registerDimensions(final RegisterDimensionsEvent event) {
-if (DimensionType.byName(EnhancedcraftMod.MORE_BIOMES_DIM_TYPE) == null) {
-            DimensionManager.registerDimension(EnhancedcraftMod.MORE_BIOMES_DIM_TYPE, DimensionInit.ANGELWOOD_LANDS_DIM.get(),null, false);
+if (DimensionType.byName(EnhancedcraftMod.ANGELWOOD_LANDS_DIM_TYPE) == null) {
+            DimensionManager.registerDimension(EnhancedcraftMod.ANGELWOOD_LANDS_DIM_TYPE, DimensionInit.ANGELWOOD_LANDS_DIM.get(),null, false);
         }
         EnhancedcraftMod.LOGGER.info("Dimensions Registered!");
     }

@@ -1,6 +1,6 @@
 package com.christopher.enhancedcraft.world.dimension;
 
-public class VoronoiGenerator {
+public class AngelwoodLandsVoronoiGenerator {
     private static final int X_NOISE_GEN = 80;
     private static final int Y_NOISE_GEN = 160;
     private static final int Z_NOISE_GEN = 80;
@@ -14,7 +14,7 @@ public class VoronoiGenerator {
     private boolean enableDistance;
     private int seed;
 
-    public VoronoiGenerator() {
+    public AngelwoodLandsVoronoiGenerator() {
         displacement = DEFAULT_VORONOI_DISPLACEMENT;
         enableDistance = false;
         frequency = DEFAULT_VORONOI_FREQUENCY;

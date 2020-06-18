@@ -20,10 +20,10 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 
-public class MoreBiomes extends Dimension {
+public class AngelwoodLands extends Dimension {
     private static final Vec3d field_227177_f_ = new Vec3d((double)0.2F, (double)0.03F, (double)0.03F);
 
-    public MoreBiomes(World worldIn, DimensionType typeIn) {
+    public AngelwoodLands(World worldIn, DimensionType typeIn) {
         super(worldIn, typeIn, 0.1F);
     }
 

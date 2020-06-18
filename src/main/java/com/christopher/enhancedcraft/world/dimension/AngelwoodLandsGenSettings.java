@@ -2,7 +2,7 @@ package com.christopher.enhancedcraft.world.dimension;
 
 import net.minecraft.world.gen.GenerationSettings;
 
-public class MoreBiomesGenSettings extends GenerationSettings {
+public class AngelwoodLandsGenSettings extends GenerationSettings {
 
     private final int field_202212_j = 4;
     private final int field_202213_k = 4;

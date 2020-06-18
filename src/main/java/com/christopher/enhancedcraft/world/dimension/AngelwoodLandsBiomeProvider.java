@@ -10,17 +10,17 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-public class MoreBiomesBiomeProvider  extends BiomeProvider {
+public class AngelwoodLandsBiomeProvider extends BiomeProvider {
 
     private static final Set<Biome> biomeList = ImmutableSet.of(BiomeInit.ANGELWOOD_FOREST.get());
     private Random rand;
     private final double biomeSize = 32.0D;
-    private VoronoiGenerator biomeNoise;
+    private AngelwoodLandsVoronoiGenerator biomeNoise;
 
-    public MoreBiomesBiomeProvider(MoreBiomesBiomeProviderSettings settings) {
+    public AngelwoodLandsBiomeProvider(AngelwoodLandsBiomeProviderSettings settings) {
         super(biomeList);
         rand = new Random();
-        this.biomeNoise = new VoronoiGenerator();
+        this.biomeNoise = new AngelwoodLandsVoronoiGenerator();
         this.biomeNoise.setSeed((int) settings.getSeed());
     }
 

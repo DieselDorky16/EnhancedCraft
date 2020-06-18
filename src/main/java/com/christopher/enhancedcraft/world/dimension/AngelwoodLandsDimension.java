@@ -7,9 +7,9 @@ import net.minecraftforge.common.ModDimension;
 
 import java.util.function.BiFunction;
 
-public class MoreBiomesDimension extends ModDimension {
+public class AngelwoodLandsDimension extends ModDimension {
     @Override
     public BiFunction<World, DimensionType, ? extends Dimension> getFactory() {
-        return MoreBiomes::new;
+        return AngelwoodLands::new;
     }
 }
