@@ -1,5 +1,6 @@
 package com.christopher.enhancedcraft;
 
+import com.christopher.enhancedcraft.config.ConfigHandler;
 import com.christopher.enhancedcraft.init.BiomeInit;
 import com.christopher.enhancedcraft.init.BlockInit;
 import com.christopher.enhancedcraft.init.BlockItemInit;
@@ -16,11 +17,14 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -35,8 +39,14 @@ public class EnhancedcraftMod {
 
 
     public EnhancedcraftMod() {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ConfigHandler.server_config);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ConfigHandler.client_config);
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        ConfigHandler.loadConfig(ConfigHandler.client_config, FMLPaths.CONFIGDIR.get().resolve("enhancedcraft-client.toml").toString());
+        ConfigHandler.loadConfig(ConfigHandler.server_config, FMLPaths.CONFIGDIR.get().resolve("enhancedcraft-server.toml").toString());
 
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
@@ -75,8 +85,9 @@ public class EnhancedcraftMod {
 
     @SubscribeEvent
     public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
-        BiomeInit.registerBiomes();
-        LOGGER.info("Biomes successfully registered!");
-        LOGGER.debug("The biomes in this mod should have been generated. If you are not seeing any biomes naturally generate, please use GitHub to report any issues!");
+            BiomeInit.registerBiomes();
+            LOGGER.info("Biomes successfully registered!");
+            LOGGER.debug("The biomes in this mod should have been generated. If you are not seeing any biomes naturally generate, please use GitHub to report any issues!");
+
     }
 }

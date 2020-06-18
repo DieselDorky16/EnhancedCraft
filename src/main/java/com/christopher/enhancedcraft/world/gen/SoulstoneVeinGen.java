@@ -1,5 +1,6 @@
 package com.christopher.enhancedcraft.world.gen;
 
+import com.christopher.enhancedcraft.config.UniversalConfig;
 import com.christopher.enhancedcraft.init.BlockInit;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
@@ -21,44 +22,11 @@ public class SoulstoneVeinGen {
         for (Biome biome : ForgeRegistries.BIOMES) {
             if (biome == Biomes.NETHER) {
                 ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(10, 0, 0, 120));// Count, MinHeight, MaxHeightBase, MaxHeight
+                        .configure(new CountRangeConfig(UniversalConfig.enhancedcraft_chance.get(), 0, 0, 120));
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockInit.SOULSTONE.get().getDefaultState(), 12))
+                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockInit.SOULSTONE.get().getDefaultState(), UniversalConfig.soulstone_vein_size.get()))
                         .withPlacement(customConfig));
             }
-            /*
-            #for 1.16 ONLY
-           else if (biome == Biomes.NETHER_WASTES) {
-                ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(5, 0, 0, 120));// Count, MinHeight, MaxHeightBase, MaxHeight
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.SOULSTONE.get().getDefaultState(), 12))
-                        .withPlacement(customConfig));
-           else if (biome == Biomes.CRIMSON_FOREST) {
-                ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(5, 0, 0, 120));// Count, MinHeight, MaxHeightBase, MaxHeight
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.SOULSTONE.get().getDefaultState(), 12))
-                        .withPlacement(customConfig));
-              else if (biome == Biomes.WARPED_FOREST) {
-                ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(5, 0, 0, 120));// Count, MinHeight, MaxHeightBase, MaxHeight
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.SOULSTONE.get().getDefaultState(), 12))
-                        .withPlacement(customConfig));
-              else if (biome == Biomes.SOUL_SAND_VALLEY) {
-                ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(5, 0, 0, 120));// Count, MinHeight, MaxHeightBase, MaxHeight
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.SOULSTONE.get().getDefaultState(), 12))
-                        .withPlacement(customConfig));
-              else if (biome == Biomes.BASALT_DELTAS) {
-                ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(5, 0, 0, 120));// Count, MinHeight, MaxHeightBase, MaxHeight
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.SOULSTONE.get().getDefaultState(), 12))
-                        .withPlacement(customConfig));
-             */
         }
     }
 }
