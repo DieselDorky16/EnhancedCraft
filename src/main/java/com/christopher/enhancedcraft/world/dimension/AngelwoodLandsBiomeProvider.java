@@ -1,6 +1,6 @@
 package com.christopher.enhancedcraft.world.dimension;
 
-import com.christopher.enhancedcraft.init.BiomeInit;
+import com.christopher.enhancedcraft.init.UnusedBiomesInit;
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.provider.BiomeProvider;
@@ -12,7 +12,7 @@ import java.util.Set;
 
 public class AngelwoodLandsBiomeProvider extends BiomeProvider {
 
-    private static final Set<Biome> biomeList = ImmutableSet.of(BiomeInit.ANGELWOOD_FOREST.get());
+    private static final Set<Biome> biomeList = ImmutableSet.of(UnusedBiomesInit.ANGELWOOD_FOREST.get());
     private Random rand;
     private final double biomeSize = 32.0D;
     private AngelwoodLandsVoronoiGenerator biomeNoise;

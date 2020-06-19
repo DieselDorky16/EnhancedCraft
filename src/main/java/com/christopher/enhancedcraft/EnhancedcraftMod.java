@@ -8,6 +8,7 @@ import com.christopher.enhancedcraft.init.DimensionInit;
 import com.christopher.enhancedcraft.init.EnchantmentInit;
 import com.christopher.enhancedcraft.init.ItemInit;
 import com.christopher.enhancedcraft.init.PotionInit;
+import com.christopher.enhancedcraft.init.UnusedBiomesInit;
 import com.christopher.enhancedcraft.init.vanilla.VanillaBlockInit;
 import com.christopher.enhancedcraft.init.vanilla.VanillaBlockItemInit;
 import com.christopher.enhancedcraft.world.gen.PlatinumRemainsGen;
@@ -54,6 +55,7 @@ public class EnhancedcraftMod {
         modEventBus.addListener(this::setup);
 
         BiomeInit.BIOMES.register(modEventBus);
+        UnusedBiomesInit.BIOMES.register(modEventBus);
         DimensionInit.MOD_DIMENSIONS.register(modEventBus);
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);

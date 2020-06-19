@@ -164,4 +164,5 @@ public class BlockInit {
     public static final RegistryObject<Block> MAROON_CARPET = BLOCKS.register("maroon_carpet", () -> new MaroonCarpetBlock(NewDyeColor.MAROON, Block.Properties.create(Material.CARPET, MaterialColor.SNOW).hardnessAndResistance(0.1F).sound(SoundType.CLOTH)));
 
 
+
 }

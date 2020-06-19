@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fire_side",
+  "textures": {
+    "fire": "enhancedcraft:blocks/angel_fire_0"
+  }
+}

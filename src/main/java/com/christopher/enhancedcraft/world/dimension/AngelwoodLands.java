@@ -1,7 +1,7 @@
 package com.christopher.enhancedcraft.world.dimension;
 
-import com.christopher.enhancedcraft.init.BiomeInit;
 import com.christopher.enhancedcraft.init.BlockInit;
+import com.christopher.enhancedcraft.init.UnusedBiomesInit;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -53,7 +53,7 @@ public class AngelwoodLands extends Dimension {
         EndGenerationSettings endgenerationsettings = ChunkGeneratorType.FLOATING_ISLANDS.createSettings();
         endgenerationsettings.setDefaultBlock(BlockInit.ANGEL_NYLIUM.get().getDefaultState());
         endgenerationsettings.setDefaultFluid(Blocks.AIR.getDefaultState());
-        return ChunkGeneratorType.FLOATING_ISLANDS.create(this.world, BiomeProviderType.FIXED.create(BiomeProviderType.FIXED.createSettings(this.world.getWorldInfo()).setBiome(BiomeInit.ANGELWOOD_FOREST.get())), endgenerationsettings);
+        return ChunkGeneratorType.FLOATING_ISLANDS.create(this.world, BiomeProviderType.FIXED.create(BiomeProviderType.FIXED.createSettings(this.world.getWorldInfo()).setBiome(UnusedBiomesInit.ANGELWOOD_FOREST.get())), endgenerationsettings);
     }
 
     /**

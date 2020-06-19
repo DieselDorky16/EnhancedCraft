@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fire_up",
+  "textures": {
+    "fire": "enhancedcraft:blocks/angel_fire_1"
+  }
+}

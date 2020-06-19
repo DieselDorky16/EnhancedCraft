@@ -2,7 +2,6 @@ package com.christopher.enhancedcraft.init;
 
 import com.christopher.enhancedcraft.EnhancedcraftMod;
 import com.christopher.enhancedcraft.config.UniversalConfig;
-import com.christopher.enhancedcraft.world.biome.AngelwoodForest;
 import com.christopher.enhancedcraft.world.biome.DeepSnowyTundraBiome;
 import com.christopher.enhancedcraft.world.biome.FrozenDesertBiome;
 import com.christopher.enhancedcraft.world.biome.FrozenDesertHillsBiome;
@@ -69,9 +68,6 @@ public class BiomeInit {
     public static final RegistryObject<Biome> FROZEN_MUSHROOM_FIELDS_SHORE = BIOMES
             .register("frozen_mushroom_fields_shore",
                     FrozenMushroomFieldShoreBiome::new);
-    public static final RegistryObject<Biome> ANGELWOOD_FOREST = BIOMES
-            .register("angelwood_forest",
-                    AngelwoodForest::new);
 
 
     public static void registerBiomes() {
@@ -87,14 +83,12 @@ public class BiomeInit {
         registerBiomes(FROZEN_SWAMP.get(), Type.SWAMP, Type.SNOWY, Type.COLD, Type.OVERWORLD);
         registerBiomes(DEEP_SNOWY_TUNDRA.get(), Type.SNOWY, Type.COLD, Type.OVERWORLD);
         registerBiomes(DEEP_SNOWY_TUNDRA.get(), Type.SNOWY, Type.MUSHROOM, Type.RARE, Type.COLD, Type.OVERWORLD);
-        registerBiomes(ANGELWOOD_FOREST.get(), Type.HOT, Type.DRY, Type.NETHER);
     }
 
 
     private static void registerBiomes(Biome biome, Type... types) {
         // the line below will make it spawn in the overworld
         if(UniversalConfig.biomes_can_generate.get()) {
-            BiomeManager.addBiome(BiomeManager.BiomeType.DESERT, new BiomeManager.BiomeEntry(biome, 5));
             BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 5));
             BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(biome, 5));
             BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 5));
