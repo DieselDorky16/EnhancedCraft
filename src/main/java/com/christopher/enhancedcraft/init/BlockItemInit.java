@@ -24,6 +24,7 @@ In Christ,
 Christopher Lewis, lead and only developer of EnhancedcraftMod
 */
 
+@SuppressWarnings("ALL")
 public class BlockItemInit {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, EnhancedcraftMod.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, EnhancedcraftMod.MOD_ID);

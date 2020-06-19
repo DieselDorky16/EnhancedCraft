@@ -23,6 +23,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 import java.util.Random;
 
+@SuppressWarnings("ALL")
 public class PlatinumShears extends ShearsItem {
 
     public PlatinumShears() {

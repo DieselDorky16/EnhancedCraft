@@ -2,6 +2,7 @@ package com.christopher.enhancedcraft.world.dimension;
 
 import net.minecraft.world.gen.GenerationSettings;
 
+@SuppressWarnings("ALL")
 public class AngelwoodLandsGenSettings extends GenerationSettings {
 
     private final int field_202212_j = 4;

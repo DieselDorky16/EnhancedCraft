@@ -6,6 +6,6 @@ import net.minecraft.block.material.Material;
 
 public class PackedGlazedSoulBlock extends Block {
     public PackedGlazedSoulBlock() {
-        super(Properties.create(Material.ICE).slipperiness(1.50F).hardnessAndResistance(0.5F).sound(SoundType.GLASS));
+        super(Properties.create(Material.ICE).slipperiness(0.989F).hardnessAndResistance(0.5F).sound(SoundType.GLASS));
     }
 }

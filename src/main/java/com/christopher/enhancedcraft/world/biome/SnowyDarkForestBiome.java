@@ -17,6 +17,7 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+@SuppressWarnings("ALL")
 public class SnowyDarkForestBiome  extends Biome {
     public SnowyDarkForestBiome() {
         super((new Biome.Builder()).surfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG).precipitation(Biome.RainType.SNOW).category(Biome.Category.FOREST).depth(0.1F).scale(0.2F).temperature(-0.5F).downfall(0.8F).waterColor(4159204).waterFogColor(329011).parent((String)null));

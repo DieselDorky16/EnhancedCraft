@@ -17,6 +17,7 @@ import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 
+@SuppressWarnings("ALL")
 public class AngelwoodForest extends Biome {
     public AngelwoodForest() {
         super((new Biome.Builder()).surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(BlockInit.ANGEL_NYLIUM.get().getDefaultState(), Blocks.NETHERRACK.getDefaultState(), Blocks.NETHERRACK.getDefaultState())).precipitation(Biome.RainType.NONE).category(Category.NETHER).depth(0.45F).scale(0.3F).temperature(3.0F).downfall(0.0F).waterColor(4159204).waterFogColor(329011).parent((String)null));

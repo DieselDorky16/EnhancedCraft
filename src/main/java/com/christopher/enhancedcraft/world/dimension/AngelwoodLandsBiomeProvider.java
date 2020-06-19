@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
+@SuppressWarnings("ALL")
 public class AngelwoodLandsBiomeProvider extends BiomeProvider {
 
     private static final Set<Biome> biomeList = ImmutableSet.of(UnusedBiomesInit.ANGELWOOD_FOREST.get());

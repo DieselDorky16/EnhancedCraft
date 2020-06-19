@@ -14,7 +14,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
-@SuppressWarnings("deprecation")
+@SuppressWarnings("ALL")
 public class CharredSoulSpongeBlock extends Block {
     public CharredSoulSpongeBlock(Block.Properties properties) {
         super(properties);

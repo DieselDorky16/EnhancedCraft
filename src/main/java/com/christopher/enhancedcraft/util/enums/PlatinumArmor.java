@@ -13,6 +13,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("ALL")
 public enum PlatinumArmor implements IArmorMaterial {
     PLATINUM(EnhancedcraftMod.MOD_ID + ":platinum", 50, new int[]{3, 8, 6, 3}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 5.0F, () -> {return Ingredient.fromItems(ItemInit.PLATINUM_INGOT.get());
     });

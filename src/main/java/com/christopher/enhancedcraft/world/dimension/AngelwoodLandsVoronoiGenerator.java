@@ -1,5 +1,6 @@
 package com.christopher.enhancedcraft.world.dimension;
 
+@SuppressWarnings("ALL")
 public class AngelwoodLandsVoronoiGenerator {
     private static final int X_NOISE_GEN = 80;
     private static final int Y_NOISE_GEN = 160;

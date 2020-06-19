@@ -1,6 +1,10 @@
 package com.christopher.enhancedcraft.blocks;
 
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.BreakableBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -11,12 +15,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.LightType;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
-import java.util.Random;
 
 @SuppressWarnings("deprecation")
 public class GlazedSoulBlock extends BreakableBlock {
@@ -35,13 +36,6 @@ public class GlazedSoulBlock extends BreakableBlock {
             if (material.blocksMovement() || material.isLiquid()) {
                 worldIn.setBlockState(pos, Blocks.LAVA.getDefaultState());
             }
-        }
-
-    }
-
-    public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
-        if (worldIn.getLightFor(LightType.BLOCK, pos) < 11 - state.getOpacity(worldIn, pos)) {
-            this.turnIntoWater(state, worldIn, pos);
         }
 
     }

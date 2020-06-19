@@ -13,7 +13,7 @@ public class UniversalConfig {
 
         enhancedcraft_chance = server
                 .comment("Maximum number of Soulstone veins that can spawn in one chunk")
-                .defineInRange("morebiomes.enhancedcraft_chance", 10, 0, 20);
+                .defineInRange("morebiomes.enhancedcraft_chance", 15, 0, 20);
         biomes_can_generate = server
                 .comment ("Should the biomes generate at all. This only applies to custom ones.")
                 .define ("biomegen.biomes_can_generate",true);

@@ -22,6 +22,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
+@SuppressWarnings("ALL")
 public class SoulEndRod extends EndRodBlock {
     public SoulEndRod() {
         super(Block.Properties.create(Material.MISCELLANEOUS).lightValue(10).hardnessAndResistance(0.0F,0.0F).sound(SoundType.WOOD).notSolid());

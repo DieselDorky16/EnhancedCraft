@@ -13,6 +13,7 @@ import net.minecraft.world.gen.OctavesNoiseGenerator;
 
 import java.util.List;
 
+@SuppressWarnings("ALL")
 public class AngelwoodLandsChunkGenerator extends NoiseChunkGenerator<AngelwoodLandsGenSettings> {
     private static final float[] field_222576_h = Util.make(new float[25], (p_222575_0_) -> {
         for (int i = -2; i <= 2; ++i) {

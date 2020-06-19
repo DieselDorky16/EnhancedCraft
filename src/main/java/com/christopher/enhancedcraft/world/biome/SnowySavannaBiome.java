@@ -11,6 +11,7 @@ import net.minecraft.world.gen.feature.structure.MineshaftStructure;
 import net.minecraft.world.gen.feature.structure.VillageConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
+@SuppressWarnings("ALL")
 public class SnowySavannaBiome extends Biome {
     public SnowySavannaBiome() {
         super((new Biome.Builder()).surfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG).precipitation(Biome.RainType.SNOW).category(Biome.Category.SAVANNA).depth(0.125F).scale(0.05F).temperature(-0.5F).downfall(0.4F).waterColor(0x205e83).waterFogColor(0x205e83).parent((String)null));

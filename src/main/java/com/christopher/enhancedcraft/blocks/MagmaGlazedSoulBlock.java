@@ -6,6 +6,6 @@ import net.minecraft.block.material.Material;
 
 public class MagmaGlazedSoulBlock extends Block {
     public MagmaGlazedSoulBlock() {
-        super(Properties.create(Material.ICE).slipperiness(2.25F).hardnessAndResistance(0.5F).sound(SoundType.GLASS));
+        super(Properties.create(Material.ICE).slipperiness(0.998F).hardnessAndResistance(0.5F).sound(SoundType.GLASS));
     }
 }

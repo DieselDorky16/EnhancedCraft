@@ -10,6 +10,7 @@ import net.minecraft.world.gen.feature.structure.MineshaftConfig;
 import net.minecraft.world.gen.feature.structure.MineshaftStructure;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
+@SuppressWarnings("ALL")
 public class FrozenSwampBiome extends Biome {
     public FrozenSwampBiome() {
         super((new Biome.Builder()).surfaceBuilder(SurfaceBuilder.SWAMP, SurfaceBuilder.GRASS_DIRT_GRAVEL_CONFIG).precipitation(Biome.RainType.SNOW).category(Biome.Category.SWAMP).depth(-0.2F).scale(0.1F).temperature(-0.8F).downfall(0.9F).waterColor(0x1a051A).waterFogColor(0x1a051A).parent((String)null));

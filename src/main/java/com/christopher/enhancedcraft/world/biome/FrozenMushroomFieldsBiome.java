@@ -10,6 +10,7 @@ import net.minecraft.world.gen.feature.structure.MineshaftConfig;
 import net.minecraft.world.gen.feature.structure.MineshaftStructure;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
+@SuppressWarnings("ALL")
 public class FrozenMushroomFieldsBiome extends Biome {
     public FrozenMushroomFieldsBiome() {
         super((new Biome.Builder()).surfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.MYCELIUM_DIRT_GRAVEL_CONFIG).precipitation(Biome.RainType.SNOW).category(Biome.Category.MUSHROOM).depth(0.2F).scale(0.3F).temperature(-0.9F).downfall(1.0F).waterColor(4159204).waterFogColor(329011).parent((String)null));

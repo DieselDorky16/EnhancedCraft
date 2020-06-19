@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("ALL")
 public enum NewDyeColor implements IStringSerializable {
     MAROON(16,"maroon", 0x640E27, MaterialColor.ADOBE, 0x640e27, 0x640e27);
 

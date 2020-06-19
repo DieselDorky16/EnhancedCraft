@@ -13,6 +13,7 @@ IMPORTANT:
 This class is specifically for registering modded variants of vanilla blocks. No, this does not include new full block variants, just for stairs, slabs, walls, fences, etc.
 */
 
+@SuppressWarnings("ALL")
 public class VanillaBlockInit {
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, EnhancedcraftMod.MOD_ID);
     public static void init() {
